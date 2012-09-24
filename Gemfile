@@ -7,6 +7,11 @@ gem 'rails', '3.2.8'
 
 gem 'pg'
 gem 'heroku'
+#gem 'taps'
+
+group :development do
+  gem 'taps', :require => false # has an sqlite dependency, which heroku hates
+end
 
 group :development, :test do
   gem 'rspec-rails', '2.8.1'
