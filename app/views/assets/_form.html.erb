@@ -20,8 +20,9 @@
     <%= f.text_area :description %>
   </div>
   <div class="field">
-    <%= f.label :category_id %><br />
-    <%= f.number_field :category_id %>
+    <%= f.label :category_id %><br /><%= f.select(:category_id, Category.order("name").map { |c| [c.name, c.id] } ) %><br />
+    
+    <%#= f.number_field :category_id %>
   </div>
   <div class="actions">
     <%= f.submit %>

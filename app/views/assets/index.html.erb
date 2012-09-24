@@ -8,6 +8,7 @@
     <th></th>
     <th></th>
     <th></th>
+    <th></th>
   </tr>
 
 <% @assets.each do |asset| %>
@@ -15,7 +16,14 @@
     <td><%= asset.name %></td>
     <td><%= asset.description %></td>
     <td><%= asset.category_id %></td>
-    <td><%= asset.category.name %></td>
+    <td>
+      <% @category.each do |cat| %>
+        <% if cat.id == asset.category_id %>
+          <%= cat.name %>
+        <% end %>
+      <% end %>  
+      
+    </td>
     <td><%= link_to 'Show', asset %></td>
     <td><%= link_to 'Edit', edit_asset_path(asset) %></td>
     <td><%= link_to 'Destroy', asset, method: :delete, data: { confirm: 'Are you sure?' } %></td>
