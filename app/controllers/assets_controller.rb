@@ -2,7 +2,7 @@ class AssetsController < ApplicationController
   # GET /assets
   # GET /assets.json
   def index
-    @assets = Asset.all
+    @assets = Asset.find(:all, :include => :category)
 
     respond_to do |format|
       format.html # index.html.erb

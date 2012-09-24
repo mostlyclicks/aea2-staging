@@ -1,6 +1,6 @@
 <h1>Listing categories</h1>
 
-<table>
+<table border=1>
   <tr>
     <th>Name</th>
     <th>Description</th>
@@ -13,6 +13,14 @@
   <tr>
     <td><%= category.name %></td>
     <td><%= category.description %></td>
+    <td><%= category.id %></td>
+    <td>
+        <ul>
+          <% category.assets.each do |ca| %>
+          <li><%= ca.name %></li>
+          <% end %>
+        </ul>
+    </td>
     <td><%= link_to 'Show', category %></td>
     <td><%= link_to 'Edit', edit_category_path(category) %></td>
     <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
