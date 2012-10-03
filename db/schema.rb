@@ -11,10 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(:version => 20120920214048) do
-=======
-ActiveRecord::Schema.define(:version => 20120920214748) do
+ActiveRecord::Schema.define(:version => 20121003141841) do
 
   create_table "assets", :force => true do |t|
     t.string   "name"
@@ -22,14 +19,19 @@ ActiveRecord::Schema.define(:version => 20120920214748) do
     t.integer  "category_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "slug"
   end
->>>>>>> add-assets-scaffold
+
+  add_index "assets", ["slug"], :name => "index_assets_on_slug"
 
   create_table "categories", :force => true do |t|
     t.string   "name"
     t.text     "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "slug"
   end
+
+  add_index "categories", ["slug"], :name => "index_categories_on_slug"
 
 end

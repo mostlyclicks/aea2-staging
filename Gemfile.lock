@@ -55,6 +55,7 @@ GEM
     execjs (1.4.0)
       multi_json (~> 1.0)
     ffi (1.1.5)
+    friendly_id (4.0.8)
     heroku (2.31.4)
       heroku-api (~> 0.3.5)
       launchy (>= 0.3.2)
@@ -169,6 +170,7 @@ PLATFORMS
 DEPENDENCIES
   capybara (= 1.1.2)
   coffee-rails (~> 3.2.1)
+  friendly_id
   heroku
   jquery-rails
   pg
