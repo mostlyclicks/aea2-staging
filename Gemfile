@@ -38,6 +38,8 @@ end
 
 gem 'jquery-rails'
 gem 'friendly_id'
+gem 'carrierwave'
+gem 'rmagick'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

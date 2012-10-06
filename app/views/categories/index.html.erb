@@ -18,6 +18,7 @@
         <ul>
           <% category.assets.each do |ca| %>
           <li><%= ca.name %></li>
+          <li><%= image_tag ca.aea_file_url(:thumb) %></li>
           <% end %>
         </ul>
     </td>

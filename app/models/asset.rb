@@ -1,6 +1,7 @@
 class Asset < ActiveRecord::Base
-  attr_accessible :category_id, :description, :name
+  attr_accessible :category_id, :description, :name, :aea_file
   belongs_to :category
+  mount_uploader :aea_file, AeaFileUploader
 
   validates_uniqueness_of :name
 

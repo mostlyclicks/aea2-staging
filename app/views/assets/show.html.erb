@@ -16,6 +16,11 @@
   <%= @asset.category_id %>
 </p>
 
+<p>
+  <%= image_tag @asset.aea_file_url(:thumb) %>
+  <%= link_to 'Download', @asset.aea_file_url %>
+</p>
+
 
 <%= link_to 'Edit', edit_asset_path(@asset) %> |
 <%= link_to 'Back', assets_path %>
