@@ -8,6 +8,7 @@ gem 'rails', '3.2.8'
 gem 'pg'
 gem 'heroku'
 gem 'thin'
+gem 'fog'
 #gem 'taps'
 
 group :development do

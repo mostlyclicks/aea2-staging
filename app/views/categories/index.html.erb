@@ -18,7 +18,9 @@
         <ul>
           <% category.assets.each do |ca| %>
           <li><%= ca.name %></li>
-          <li><%= image_tag ca.aea_file_url(:thumb) %></li>
+          <% if ca.aea_file_url.present? %>
+            <li><%= image_tag ca.aea_file_url(:thumb) unless ca.aea_file_url.blank? %></li>
+          <% end %>
           <% end %>
         </ul>
     </td>
