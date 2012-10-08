@@ -1,7 +1,7 @@
 CarrierWave.configure do |config|
 	config.root = Rails.root.join('tmp')
 	config.cache_dir = 'uploads'
-	
+
 	config.fog_credentials = {
 		:provider					=> 'AWS',
 		:aws_access_key_id			=> ENV['S3_KEY_ACCESS'],
@@ -12,6 +12,4 @@ CarrierWave.configure do |config|
 	config.fog_public = true
 	config.fog_attributes = {}
 	#config.asset_host = {}
-
-
 end
