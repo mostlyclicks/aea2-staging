@@ -1,36 +1,33 @@
 <h1>Listing categories</h1>
 
-<table border=1>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<style>
+dl {width:100px;border:1px solid red;float:left;width:50%;}
+</style>
 
-<% @categories.each do |category| %>
-  <tr>
-    <td><%= category.name %></td>
-    <td><%= category.description %></td>
-    <td><%= category.id %></td>
-    <td>
-        <ul>
-          <% category.assets.each do |ca| %>
-          <li><%= ca.name %></li>
-          <% if ca.aea_file_url.present? %>
-            <li><%= image_tag ca.aea_file_url(:thumb) unless ca.aea_file_url.blank? %></li>
-          <% end %>
-          <% end %>
-        </ul>
-    </td>
-    <td><%= link_to 'Show', category %></td>
-    <td><%= link_to 'Edit', edit_category_path(category) %></td>
-    <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
 
+  <% @categories.each do |category| %>
+  <div class="span8" style="border:1px solid blue;">
+    <h3><%= category.name %></h3>
+    <p><%= category.description %></p>
+    <% category.assets.each do |ca| %>
+      <div class="span4">
+        <dl>
+          <dt><%= link_to ca.name, ca %></dt>
+              <% if ca.aea_file_url.present? %>
+              <dd><%= link_to 'Download file', ca.aea_file_url %></dd>
+              <% end %>
+          </dl>
+      </div>
+    <% end %>
+  </div>
+  <% end %>
+
+  
+
+
+
+
+</div>
 <br />
 
 <%= link_to 'New Category', new_category_path %> | <%= link_to 'New Asset', new_asset_path %>
