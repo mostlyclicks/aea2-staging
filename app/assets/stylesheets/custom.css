@@ -9,10 +9,14 @@ body {background: url('/assets/background.jpg') no-repeat center center fixed;
 .container {width:980px;margin-top:0;padding-bottom:20px;}
 #content {background:url(/assets/main-bg.gif) 0 0 repeat-y #fff;}
 #header {display:block;background:url(/assets/top-bg.jpg) 0 0 #fff;}
+#main {background:url(/assets/blue-gradient.png) 330px 0 no-repeat;}
 
-h3 {color:#008fc5;font-family:Palatino, times, serif;font-size:1.4em;font-weight:100;}
+h3 {color:#008fc5;font-family:Palatino, times, serif;font-size:1.4em;font-weight:100;margin-top:0;}
 p {font-family:arial, sans-serif;font-size:.9em;}
-ul {}
+ul {margin-left:10px;}
+ul#assets li {list-style-image:url(/assets/li-arrow.png);margin-bottom:1em;}
+/*li {}*/
+.rightBorder {border-right:1px solid #cdcdcd;}
 /*.faq {display:block;padding-bottom:3em;float:left;}*/
 
 #footer {background-color:#6d6e71;padding:20px 0 20px 0;color:#fff;}

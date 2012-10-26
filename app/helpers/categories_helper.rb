@@ -1,7 +1,7 @@
 module CategoriesHelper
 	def assets_present(category)
 		if category.assets.present?
-        	"span4"
+        	"span4 rightBorder"
         else
         	"span10"
         end
