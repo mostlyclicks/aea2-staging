@@ -7,8 +7,26 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="container">
-<%= yield %>
+	
 
-</div></body>
+<div class="container">
+
+	<div id="header">
+		<%= image_tag 'top-logo.png', alt: 'AEA Logo' %>
+		<%= image_tag 'top-title-tagline.png', alt: 'Media and News, Resources for the media and AEA members.', style: 'margin-left:50px;'%>
+	</div>
+
+
+	<div class="row">
+	<div id="sidebar" class="span3">
+		<%= image_tag 'side-tag.png' %>
+		<%= image_tag 'orange-ribbon.png', style: 'min-width:329px;min-height:66px;'%>
+	</div>
+	<div class="span7">
+		<%= yield %>
+	</div>
+	</div>
+
+</div>
+</body>
 </html>

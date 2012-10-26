@@ -1,0 +1,15 @@
+
+body {background: url('/assets/background.jpg') no-repeat center center fixed;
+      	-webkit-background-size: cover;
+      	-moz-background-size: cover;
+      	-o-background-size: cover;
+      	background-size: cover;
+      	height:100%;}
+
+.container {width:980px;background-color:#fff;margin-top:0;background:url(main-bg.gif) 0 0 repeat-y #fff;}
+#header {display:block;background:url(/assets/top-bg.jpg) 0 0 #fff;}
+
+h3 {color:#008fc5;font-family:Palatino, times, serif;font-size:1.3em;font-weight:100;}
+p {font-family:arial, sans-serif;font-size:.9em;}
+ul {}
+/*.faq {display:block;padding-bottom:3em;float:left;}*/

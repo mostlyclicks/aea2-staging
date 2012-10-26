@@ -1,25 +1,32 @@
-<h1>Listing categories</h1>
-
 <style>
-dl {width:100px;border:1px solid red;float:left;width:50%;}
+/*dl {width:100px;border:1px solid red;float:left;width:50%;}*/
+ul {padding:0;margin:0;}
+li {display:block;float:left;width:40%;}
 </style>
 
-
+ 
+    
+    
+<div class="span6 pull-right" style="text-align:right;"><%= link_to 'New Category', new_category_path %> | <%= link_to 'New Asset', new_asset_path %></div>
   <% @categories.each do |category| %>
-  <div class="span8" style="border:1px solid blue;">
-    <h3><%= category.name %></h3>
-    <p><%= category.description %></p>
-    <% category.assets.each do |ca| %>
-      <div class="span4">
-        <dl>
-          <dt><%= link_to ca.name, ca %></dt>
-              <% if ca.aea_file_url.present? %>
-              <dd><%= link_to 'Download file', ca.aea_file_url %></dd>
-              <% end %>
-          </dl>
+    <div class="row-fluid span6">
+    
+      <div class="<%= assets_present(category) %>" >
+        <h3><%= category.name %></h3>
+        <p><%= category.description.html_safe %></p>
       </div>
-    <% end %>
-  </div>
+
+      <% if category.assets.present? %>
+      <div class="span8 pull-right" >
+        <ul style="display:block;margin-top:60px;">
+        <% category.assets.each do |ca| %>  
+          <li><%= link_to ca.name, ca %></li>
+        <% end %>
+        </ul>
+      </div>
+      <% end %>
+      
+    </div>
   <% end %>
 
   
@@ -30,4 +37,4 @@ dl {width:100px;border:1px solid red;float:left;width:50%;}
 </div>
 <br />
 
-<%= link_to 'New Category', new_category_path %> | <%= link_to 'New Asset', new_asset_path %>
+
