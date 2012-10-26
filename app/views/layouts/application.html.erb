@@ -9,7 +9,7 @@
 <body>
 	
 
-<div class="container">
+<div class="container" id="content">
 
 	<div id="header">
 		<%= image_tag 'top-logo.png', alt: 'AEA Logo' %>
@@ -27,6 +27,16 @@
 	</div>
 	</div>
 
+</div>
+<div class="container" id="footer" style="">
+	<div class="row">
+		<div class="span3" style="border:1px solid red;">Span 3</div>
+		<div class="span7" style="border:1px solid red;">Span 7</div>
+	</div>
+	<div class="row">
+		<div class="span4 offset6" style="border:1px solid red;">&copy;<%= Time.now.strftime('%Y') %> American Electrology Association</div>
+
+	</div>
 </div>
 </body>
 </html>

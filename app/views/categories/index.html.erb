@@ -9,7 +9,7 @@ li {display:block;float:left;width:40%;}
     
 <div class="span6 pull-right" style="text-align:right;"><%= link_to 'New Category', new_category_path %> | <%= link_to 'New Asset', new_asset_path %></div>
   <% @categories.each do |category| %>
-    <div class="row-fluid span6">
+    <div class="row-fluid span6" style="margin-left:50px;">
     
       <div class="<%= assets_present(category) %>" >
         <h3><%= category.name %></h3>
@@ -25,7 +25,7 @@ li {display:block;float:left;width:40%;}
         </ul>
       </div>
       <% end %>
-      
+
     </div>
   <% end %>
 
