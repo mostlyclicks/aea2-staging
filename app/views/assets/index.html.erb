@@ -1,5 +1,26 @@
-<h1>Listing assets</h1>
 
+<div class="row-fluid span6 show_content" style="">
+  <h1>Listing assets</h1>
+<table width="500">
+  <tr>
+    <th>Asset</th>
+    <th>Category</th>
+
+  </tr>
+<% @assets.each do |asset| %>
+  <tr>
+    <td><%= link_to asset.name, asset %></td>
+    <td><% @category.each do |cat| %>
+        <% if cat.id == asset.category_id %>
+          <%= link_to cat.name, cat %>
+        <% end %>
+      <% end %> </td>
+  </tr>
+<% end %>
+</table>
+
+</div>
+<!--
 <table>
   <tr>
     <th>Name</th>
@@ -34,3 +55,9 @@
 <br />
 
 <%= link_to 'New Asset', new_asset_path %>
+-->
+<% @categories.each do |category| %>
+  <% content_for :sb_box do %>
+          <%= pr_category(category) %>
+  <% end %>
+<% end %>

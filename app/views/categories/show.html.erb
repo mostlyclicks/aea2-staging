@@ -1,23 +1,26 @@
-<p id="notice"><%= notice %></p>
+<div class="row-fluid span6 show_content" style="">
+<h1><%= @category.name %></h1>
 
-<p>
-  <b>Name:</b>
-  <%= @category.name %>
-</p>
 
-<p>
-  <b>Description:</b>
-  <%= @category.description %>
-</p>
+
+<p><%= @category.description.html_safe %></p>
+
 
 <ul>
   <% @category.assets.each do |ca| %>
     <li>
-    <h3><%= ca.name %></h3>
-    <p><%= ca.description %></p>
+    <h3><%= link_to ca.name, ca %></h3>
+    <p><%= ca.description.html_safe %></p>
     </li>
     <% end %>
 </ul>
 
 <%= link_to 'Edit', edit_category_path(@category) %> |
 <%= link_to 'Back', categories_path %>
+</div>
+
+<% @categories.each do |category| %>
+  <% content_for :sb_box do %>
+          <%= pr_category(category) %>
+  <% end %>
+<% end %>

@@ -4,17 +4,18 @@ ul#assets li {list-style-image:url(/assets/li-arrow.png);}*/
 ul#assets li {float:left;width:40%;}
 </style>
 
- 
-    
-    
 <div class="span6 pull-right" style="text-align:right;"><%= link_to 'New Category', new_category_path %> | <%= link_to 'New Asset', new_asset_path %></div>
+
   <% @categories.each do |category| %>
-    <div class="row-fluid " style="margin-left:50px;">
-    
+    <div class="row-fluid <%= hide_pr(category) %>" style="margin-left:50px;">
       <div class="<%= assets_present(category) %>" style="">
         <h3><%= category.name %></h3>
         <p><%= category.description.html_safe %></p>
       </div>
+
+      <% content_for :sb_box do %>
+        <%= pr_category(category) %>
+      <% end %>
 
       <% if category.assets.present? %>
       <div class="span8 pull-right" >
@@ -25,8 +26,9 @@ ul#assets li {float:left;width:40%;}
         </ul>
       </div>
       <% end %>
+    
     </div>
-    <div style="border-top:1px solid #cdcdcd;margin:7px 30px 7px 50px;"></div>
+    <%= divider(category).html_safe %>
   <% end %>
 
   

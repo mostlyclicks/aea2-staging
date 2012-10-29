@@ -3,6 +3,7 @@ class AssetsController < ApplicationController
   # GET /assets.json
   def index
     @assets = Asset.find(:all, :include => :category)
+    @categories = Category.all(order: 'created_at')
     @category = Category.all
 
     respond_to do |format|
@@ -15,6 +16,7 @@ class AssetsController < ApplicationController
   # GET /assets/1.json
   def show
     @asset = Asset.find(params[:id])
+    @categories = Category.all(order: 'created_at')
 
     respond_to do |format|
       format.html # show.html.erb

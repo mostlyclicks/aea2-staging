@@ -3,6 +3,7 @@ class CategoriesController < ApplicationController
   # GET /categories.json
   def index
     @categories = Category.all(order: 'created_at')
+    @category_pr = Category.find_by_slug("press-releases")
     
     respond_to do |format|
       format.html # index.html.erb
@@ -16,6 +17,7 @@ class CategoriesController < ApplicationController
   def show
     @category = Category.find(params[:id])
     @assets = Asset.all
+    @categories = Category.all(order: 'created_at')
 
     respond_to do |format|
       format.html # show.html.erb
