@@ -1,3 +1,5 @@
+<div class="show_content">
+
 <%= form_for(@category) do |f| %>
   <% if @category.errors.any? %>
     <div id="error_explanation">
@@ -13,13 +15,31 @@
 
   <div class="field">
     <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class: 'span6' %>
   </div>
   <div class="field">
     <%= f.label :description %><br />
-    <%= f.text_area :description %>
+    <%= f.text_area :description, class: 'span6',  rows: '10' %>
   </div>
+
+ <div>
+     <label class="radio">
+       <%= f.radio_button(:layout, "float") %>
+       Float right - assets will appear to the right
+     </label>
+ 
+     <label class="radio">
+       <%= f.radio_button(:layout, "no float") %>
+       Inline - Assets will appear inline
+     </label>
+ </div>
+
+ <br/><br/>
+
+
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
+</div>

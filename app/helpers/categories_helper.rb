@@ -1,6 +1,6 @@
 module CategoriesHelper
 	def assets_present(category)
-		if category.assets.present?
+		if category.layout == "float"
         	"span4 rightBorder"
         else
         	"span10"

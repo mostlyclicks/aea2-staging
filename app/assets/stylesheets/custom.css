@@ -32,7 +32,6 @@ ul#assets li {list-style-image:url(/assets/li-arrow.png);margin-bottom:1em;}
 
  a:hover {color: #fff;}
  th {text-align:left;}
+ label {margin:20px 0 -18px 0 ;}
+ input {margin:0;}
 
-.table tbody tr:hover td, .table tbody tr:hover th {
-    background-color: transparent;
-}
