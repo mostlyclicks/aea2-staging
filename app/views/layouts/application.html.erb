@@ -34,11 +34,18 @@
 </div>
 <div class="container" id="footer" style="">
 	<div class="row">
-		<div class="span3">Span 3</div>
-		<div class="span7">Span 7</div>
+		<div class="span3">
+			<%= link_to (image_tag 'footer-fb.png', alt: 'Facebook', id: 'facebook'), 'http://www.facebook.com' %>
+			<%= link_to (image_tag 'footer-youtube.png', alt: 'Youtube'), 'http://www.youtube.com' %>
+		</div>
+		<div class="span7">
+			<p>General Information: <%= mail_to 'infoaea@electrology.com', 'infoaea@electrology.com' %><br />
+			Media Inquiries: <%= mail_to 'mediaaea@electrology.com', 'mediaaea@electrology.com' %></p>
+
+		</div>
 	</div>
 	<div class="row">
-		<div class="span4 offset6" style="border:1px solid red;">&copy;<%= Time.now.strftime('%Y') %> American Electrology Association</div>
+		<div class="span4 offset6">&copy;<%= Time.now.strftime('%Y') %> American Electrology Association</div>
 
 	</div>
 </div>

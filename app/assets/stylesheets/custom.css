@@ -15,7 +15,7 @@ h3, h1 {color:#008fc5;font-family:Palatino, times, serif;font-size:1.4em;font-we
 h1 {font-size:2em;}
 p {font-family:arial, sans-serif;font-size:.9em;}
 ul {margin-left:10px;}
-ul#assets li {list-style-image:url(/assets/li-arrow.png);margin-bottom:1em;}
+ul#assets li {list-style-image:url(/assets/li-arrow.png);margin-bottom:1em;margin-right:10px;}
 /*li {}*/
 .rightBorder {border-right:1px solid #cdcdcd;}
 /*.faq {display:block;padding-bottom:3em;float:left;}*/
@@ -24,13 +24,18 @@ ul#assets li {list-style-image:url(/assets/li-arrow.png);margin-bottom:1em;}
 		-moz-box-shadow:    -6px 6px 12px 0px #037db1;
   		-webkit-box-shadow: -6px 6px 12px 0px #037db1;
   		box-shadow:         -6px 6px 12px 0px #037db1;}
+#sb_box a, #sb_box a:visited {color:#fff;}
+#sb_box a:hover {background-color:transparent;}
 
 #footer {background-color:#6d6e71;padding:20px 0 20px 0;color:#fff;}
+#footer #facebook {margin-left:27px;}
+#footer a, #footer a:visited {color:#e2e2e2;} 
+#footer a:hover {background-color: transparent;}
 
 .show_content {margin:50px 0px 0 50px;width:587px;}
  .image-link:hover {background-color: transparent;}
 
- a:hover {color: #fff;}
+ li a:hover {color:#000;background-color: transparent;}
  th {text-align:left;}
  label {margin:20px 0 -18px 0 ;}
  input {margin:0;}
