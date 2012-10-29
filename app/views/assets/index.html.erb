@@ -34,7 +34,7 @@
 
 <% @assets.each do |asset| %>
   <tr>
-    <td><%= asset.name %></td>
+    <td><%= asset.name %></td>å
     <td><%= asset.description %></td>
     <td><%= asset.category_id %></td>
     <td>
@@ -58,6 +58,6 @@
 -->
 <% @categories.each do |category| %>
   <% content_for :sb_box do %>
-          <%= pr_category(category).html_safe %>
+          <%= pr_category(category) %>
   <% end %>
 <% end %>
