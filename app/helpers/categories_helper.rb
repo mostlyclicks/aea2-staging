@@ -23,7 +23,7 @@ module CategoriesHelper
 
 	def pr_category(category)
 		if category.slug == 'press-releases'
-			#category.name
+			category.name
 			pr = category.assets.last
 			pr.name
 			pr.description.html_safe
