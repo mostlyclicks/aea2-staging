@@ -10,8 +10,10 @@
 </p>
 
 <p>
-  <%#= image_tag @asset.aea_file_url(:thumb) %>
-  <%#= link_to 'Download', @asset.aea_file_url %>
+	<% if @asset.aea_file? %>
+  		<%= image_tag @asset.aea_file_url(:thumb) %>
+  		<%= link_to 'Download', @asset.aea_file_url %>
+  	<% end %>
 </p>
 
 
