@@ -25,8 +25,13 @@ module CategoriesHelper
 		if category.slug == 'press-releases'
 			category.name
 			pr = category.assets.last
-			pr.name
-			pr.description.html_safe
+			"<h5>#{pr.name}</h5>
+			#{pr.excerpt}<br />
+			#{link_to 'See press release', '/assets/' + pr.slug}".html_safe
+
+			#pr.name
+			#pr.excerpt.html_safe
+			#pr.slug
 		end
 	end
 
