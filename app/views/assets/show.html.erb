@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 <div class="row-fluid span6 show_content" style="">
-<ul id="assets" class="span5" style="float:right;margin-top:0px;border-left:1px solid #cdcdcd;padding-left:30px;margin-left:15px;">
+<ul id="assets" class="span5 rightNav" style="">
 <h3>Press Release Archives</h3>
 	<% @pr_assets.each do |pra| %>
 	<li><%=	link_to pra.name, pra %></li>

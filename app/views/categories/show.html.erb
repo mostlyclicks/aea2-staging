@@ -6,7 +6,7 @@
 <p><%= @category.description.html_safe %></p>
 
 
-<ul>
+<ul id="assets" class="span5 rightNav" style="">
   <% @category.assets.each do |ca| %>
     <li>
     <h3><%= link_to ca.name, ca %></h3>
