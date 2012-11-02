@@ -9,7 +9,7 @@
   </tr>
 <% @assets.each do |asset| %>
   <tr>
-    <td><%= link_to asset.name, asset %> <%= link_to 'S', asset %> | 
+    <td><%= link_to asset.name, asset.aea_file_url, target: '_blank' %> <%= link_to 'S', asset %> | 
     <%= link_to 'E', edit_asset_path(asset) %> | 
     <%= link_to 'D', asset, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     <td><% @category.each do |cat| %>
