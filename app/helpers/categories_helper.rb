@@ -22,7 +22,7 @@ module CategoriesHelper
 	end
 
 	def pr_category(category)
-		if category.slug == 'press-releases'
+		if category.slug == 'news-releases'
 			category.name
 			pr = category.assets.last
 			"<h5>#{pr.name}</h5>

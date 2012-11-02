@@ -1,6 +1,6 @@
 
 <div class="row-fluid span6 show_content" style="">
-  <h1>Listing assets</h1>
+  <h1>Assets</h1>
 <table width="500">
   <tr>
     <th>Asset</th>
@@ -9,10 +9,13 @@
   </tr>
 <% @assets.each do |asset| %>
   <tr>
-    <td><%= link_to asset.name, asset %></td>
+    <td><%= link_to asset.name, asset %> <%= link_to 'S', asset %> | 
+    <%= link_to 'E', edit_asset_path(asset) %> | 
+    <%= link_to 'D', asset, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     <td><% @category.each do |cat| %>
         <% if cat.id == asset.category_id %>
           <%= link_to cat.name, cat %>
+          
         <% end %>
       <% end %> </td>
   </tr>
