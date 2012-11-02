@@ -19,7 +19,7 @@ ul#assets li {float:left;width:40%;}
 			<ul id="assets" style="margin-top:10px;">
 			  <% @category.assets.each do |ca| %>
 			    <li style="width:100%;">
-				    <%= link_to ca.name, ca %>
+				    <%= link_to ca.name, ca.aea_file_url, target: '_blank' %>
 				    <%#= ca.description.html_safe %>
 			    </li>
 			    <% end %>
