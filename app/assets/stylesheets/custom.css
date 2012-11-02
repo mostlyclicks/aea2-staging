@@ -12,9 +12,11 @@ body {background: url('/assets/background.jpg') no-repeat center center fixed;
 #main {background:url(/assets/blue-gradient.png) 331px 0 no-repeat;}
 
 h3, h1 {color:#008fc5;font-family:Palatino, times, serif;font-size:1.4em;font-weight:100;margin-top:0;}
+h3 a, h3 a:visited {color:#008fc5;}
+h3 a:hover {background-color:transparent;}
 h1 {font-size:2em;}
 p {font-family:arial, sans-serif;font-size:.9em;}
-ul {margin-left:10px;}
+ul {margin-left:10px;padding-top:40px;}
 ul#assets li {list-style-image:url(/assets/li-arrow.png);margin-bottom:1em;margin-right:10px;}
 /*li {}*/
 .rightBorder {border-right:1px solid #cdcdcd;}

@@ -1,12 +1,5 @@
 <div class="row-fluid span6 show_content" style="">
-<h1><%= @category.name %></h1>
-
-
-
-<p><%= @category.description.html_safe %></p>
-
-
-<ul id="assets" class="span5 rightNav" style="">
+<ul id="assets" class="span5 rightNav" style="float:right;">
   <% @category.assets.each do |ca| %>
     <li>
     <h3><%= link_to ca.name, ca %></h3>
@@ -14,6 +7,11 @@
     </li>
     <% end %>
 </ul>
+<h1><%= @category.name %></h1>
+<p><%= @category.description.html_safe %></p>
+
+
+
 
 <%= link_to 'Edit', edit_category_path(@category) %> |
 <%= link_to 'Back', categories_path %>

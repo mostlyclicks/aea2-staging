@@ -8,8 +8,8 @@ ul#assets li {float:left;width:40%;}
 
   <% @categories.each do |category| %>
     <div class="row-fluid <%= hide_pr(category) %>" style="margin-left:50px;">
-      <div class="<%= assets_present(category) %>" style="">
-        <h3><%= category.name %></h3>
+      <div class="span7 <%#= assets_present(category) %>" style="">
+        <h3><%= link_to category.name, category %></h3>
         <p><%= category.description.html_safe %></p>
       </div>
 
@@ -18,10 +18,10 @@ ul#assets li {float:left;width:40%;}
       <% end %>
 
       <% if category.assets.present? %>
-      <div class="span8 pull-right" >
-        <ul id="assets" style="display:block;margin-top:10px;">
+      <div class="span3" >
+        <ul id="assets" style="margin-top:10px;">
         <% category.assets.each do |ca| %>  
-          <li><%= link_to ca.name, ca %></li>
+          <li style="width:100%;border:1px solid red;"><%= link_to ca.name, ca %></li>
         <% end %>
         </ul>
       </div>
