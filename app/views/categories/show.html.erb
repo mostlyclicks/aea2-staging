@@ -1,20 +1,31 @@
-<div class="row-fluid span6 show_content" style="">
-<ul id="assets" class="span5 rightNav" style="float:right;">
-  <% @category.assets.each do |ca| %>
-    <li>
-    <h3><%= link_to ca.name, ca %></h3>
-    <p><%= ca.description.html_safe %></p>
-    </li>
-    <% end %>
-</ul>
-<h1><%= @category.name %></h1>
-<p><%= @category.description.html_safe %></p>
+<style>
+/*dl {width:100px;border:1px solid red;float:left;width:50%;}
+ul#assets li {list-style-image:url(/assets/li-arrow.png);}*/
+ul#assets li {float:left;width:40%;}
+</style>
+
+<div class="row-fluid">
+	<div class="row-fluid<%#= hide_pr(category) %>" style="margin:40px 50px 0 50px;">
+		<div class=" span7">
+			<h1><%= @category.name %></h1>
+			<p><%= @category.description.html_safe %></p>
+
+			<%= link_to 'Edit', edit_category_path(@category) %> |
+			<%= link_to 'Back', categories_path %>
+		</div>
 
 
-
-
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+		<div class="span3">	
+			<ul id="assets" style="margin-top:10px;">
+			  <% @category.assets.each do |ca| %>
+			    <li style="width:100%;">
+				    <%= link_to ca.name, ca %>
+				    <%#= ca.description.html_safe %>
+			    </li>
+			    <% end %>
+			</ul>
+		</div>
+	</div>
 </div>
 
 <% @categories.each do |category| %>

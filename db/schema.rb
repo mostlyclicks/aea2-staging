@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121029131056) do
+ActiveRecord::Schema.define(:version => 20121102203157) do
 
   create_table "assets", :force => true do |t|
     t.string   "name"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(:version => 20121029131056) do
     t.datetime "updated_at",  :null => false
     t.string   "slug"
     t.string   "layout"
+    t.text     "excerpt"
   end
 
   add_index "categories", ["slug"], :name => "index_categories_on_slug"

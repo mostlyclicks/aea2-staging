@@ -28,7 +28,7 @@ ul#assets li {list-style-image:url(/assets/li-arrow.png);margin-bottom:1em;margi
   		box-shadow:         -6px 6px 12px 0px #037db1;}
 #sb_box a, #sb_box a:visited {color:#fff;}
 #sb_box a:hover {background-color:transparent;}
-.rightNav {float:right;margin-top:0px;border-left:1px solid #cdcdcd;padding-left:30px;margin-left:15px;}
+.rightNav {float:right;margin-top:0px;padding-left:0px;margin-left:0px;}
 
 #footer {background-color:#6d6e71;padding:20px 0 20px 0;color:#fff;}
 #footer #facebook {margin-left:27px;}
