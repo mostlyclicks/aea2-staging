@@ -23,7 +23,8 @@ ul#assets li {float:left;width:40%;}
       <div class="span3" >
         <ul id="assets" style="margin-top:10px;">
         <% category.assets.each do |ca| %>  
-          <li style="width:100%;"><%= link_to ca.name, ca %></li>
+          <li style="width:100%;"><%= link_to ca.name, ca.aea_file_url, target: '_blank' %><%#= link_to ca.aea_file, ca %></li>
+
         <% end %>
         </ul>
       </div>
