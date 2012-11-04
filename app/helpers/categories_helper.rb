@@ -1,10 +1,10 @@
 module CategoriesHelper
 	def assets_present(category)
-		#if category.layout == "float"
-        #	"span4 rightBorder"
-        #else
-        #	"span10"
-        #end
+		if category.layout == "float"
+        	"span4 rightBorder"
+        else
+        	"span10"
+        end
 	end
 
 	def hide_pr(category)
