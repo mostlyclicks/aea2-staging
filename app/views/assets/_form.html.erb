@@ -21,7 +21,11 @@
   </div>
 
   <div class="field">
-    <label>Image/Upload Type</label>
+    <label>Image/Asset Type</label>
+    <label class="radio">
+      <%= f.radio_button(:asset_type, "links") %>
+      Links
+    </label>
     <label class="radio">
       <%= f.radio_button(:asset_type, "img-for-news-release") %>
       Images for News Releases
@@ -33,6 +37,10 @@
     <label class="radio">
       <%= f.radio_button(:asset_type, "logos") %>
       Logos
+    </label>
+    <label class="radio">
+      <%= f.radio_button(:asset_type, "none") %>
+      None
     </label>
   </div><br />
 

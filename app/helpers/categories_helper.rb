@@ -23,7 +23,7 @@ module CategoriesHelper
 	          	end 
 	         html << "</ul>
         	</div>"
-        	
+
 		elsif category.layout == "1col-2col" #stories - links to files
 			html = ""
 			html << "<div class=\"span4\">
@@ -36,7 +36,7 @@ module CategoriesHelper
 	          			html << "<li class=\"float-links\">#{link_to ca.name, ca.aea_file_url, target: '_blank'}</li>"
 	          		end
 	          	end 
-	        "</ul>
+	        html << "</ul>
         	</div>"
 
 		elsif category.layout == "1col-2col-faq" #faqs - links to unhide answers
@@ -62,7 +62,9 @@ module CategoriesHelper
 	          	<ul id=\"assets\">"
 	          	if category.assets.present?
 	        		category.assets.each do |ca|
-	        			html << "<li class=\"float-links\">#{link_to ca.link_display_text, ca.link_url}</li>"
+	        			if ca.asset_type == "links"
+	        			html << "<li class=\"float-links\">#{link_to ca.link_display_text, ca.link_url }</li>"
+	        			end
 	        		end
 	        	end
 	        html << "</ul>
