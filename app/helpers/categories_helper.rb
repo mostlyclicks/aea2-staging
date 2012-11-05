@@ -47,15 +47,15 @@ module CategoriesHelper
           		#{category.excerpt.to_s.html_safe}
         	</div>
         	<div class=\"span8\">"
-        	html << "<div style=\"margin-left:30px;\">"
+        	html << "<div style=\"margin-left:30px;\"><ul id=\"assets\">"
         		if category.assets.present?
         			
         			category.assets.each do |ca|
-        				html << "<a href=\"##{'faq'+ca.id.to_s}\" data-toggle=\"collapse\" data-target=\"##{'faq'+ca.id.to_s}\">#{ca.faq_question}</a>"
-        				html << "<div id=\"#{'faq'+ca.id.to_s}\" class=\"collapse\" style=\"margin-bottom:0em;color:#008fc5;background-color:#e6f4f9;padding-left:4px;\">#{ca.faq_answer}</div>"
+        				html << "<li width=\"100%\" class=\"question-links\"><a href=\"##{'faq'+ca.id.to_s}\" data-toggle=\"collapse\" data-target=\"##{'faq'+ca.id.to_s}\">#{ca.faq_question}</a>"
+        				html << "<div id=\"#{'faq'+ca.id.to_s}\" class=\"collapse c-width\" style=\"margin-bottom:0em;color:#008fc5;background-color:#e6f4f9;padding-left:4px;\">#{ca.faq_answer}</div></li>"
         			
         			end
-        			html << "</div>"
+        			html << "</ul></div>"
         		end
         	html << "</div>"			
 

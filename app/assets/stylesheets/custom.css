@@ -4,7 +4,7 @@ body {background: url('/assets/background2.gif') no-repeat center center fixed;
       	-moz-background-size: cover;
       	-o-background-size: cover;
       	background-size: cover;
-      	height:100%;}
+      	height:100%;} 
 
 .container {width:980px;margin-top:0;padding-bottom:20px;}
 #content {background:url(/assets/main-bg.gif) 0 0 repeat-y #fff;}
@@ -22,6 +22,8 @@ p {font-family:arial, sans-serif;font-size:.9em;padding:0;margin:0;margin-bottom
 ul.topMargin {padding-top:56px;}
 ul#assets li {padding:0;float:right;list-style-image:url(/assets/li-arrow.png);margin-bottom:.75em;margin-right:0px;}
 ul#assets li.float-links {width:169px;margin-left:19px;}
+ul#assets li.question-links {width:400px;margin-left:-10px;}
+.c-width {width:330px;}
 /*li {}*/
 .rightBorder {border-right:1px solid #cdcdcd;}
 /*.faq {display:block;padding-bottom:3em;float:left;}*/
