@@ -6,108 +6,80 @@ ul#assets li {float:left;width:40%;}
 .black {border-top:1px solid black;}
 </style>
 
-<div class="row">
-  <div class="span7">
-
-    <div class="row-fluid">
-      <div class="span11 offset1">
-        <h3>2 Column / Sidebar</h3>
-      </div>
-    </div>
-    <div class="row-fluid">
-      <div class="span11 offset1">
-        <div class="span8">
-          <p>Excerpt Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-        <div class="span4">
-          <ul id="assets">
-            <li style="width:100%;">Hello</li>
-            <li style="width:100%;">Month</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="row-fluid">
-      <div class="span11 offset1">
-        <h3>1 Column / 2 Wide</h3>
-      </div>
-    </div>
-
-    <div class="row-fluid">
-      <div class="span11 offset1">
-        <div class="span4"><p>Excerpt Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
-        <div class="span4">
-          <ul id="assets">
-            <li class="red1" style="width:100%;">Hello</li>
-            <li class="red1" style="width:100%;">Month</li>
-          </ul>
-        </div>
-        <div class="span4">
-          <ul id="assets">
-            <li class="red1" style="width:100%;">Hello</li>
-            <li class="red1" style="width:100%;">Month</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="row-fluid">
-      <div class="span11 offset1">
-        <h3>1 Column / 2 Wide</h3>
-      </div>
-    </div>
-
-    
-    </div>
-
-    
-
-
-</div>
 
 
 
-
-
-
-
-
-
-
-
+<div class="row"><!-- right content main -->
+  <div class="span7 black"><!-- inner container -->
   <% @categories.each do |category| %>
-    <div class="row-fluid <%= hide_pr(category) %>" style="margin-left:50px;">
-      <div class="span10" style="">
-        <h3><%= link_to category.name, category %></h3>
-        <p><%= category.excerpt.to_s.html_safe %></p>
-        <% if category.assets.present? %>
-     
-      <% end %>
+    <!-- h3 section title -->
+    <div class="row-fluid <%= hide_pr(category) %>">
+      <div class="span11 offset1">
+        <h3><%= category.name %></h3>
       </div>
-
-      <% content_for :sb_box do %>
-        <%= pr_category(category) %>
-      <% end %>
-
-
-
-      <% if category.assets.present? %>
-      <div class="span3" >
-        <ul id="assets" style="margin-top:10px;">
-        <% category.assets.each do |ca| %>  
-          <li style="width:100%;"><%= link_to ca.name, ca.aea_file_url, target: '_blank' %><%= link_to ca.aea_file, ca %></li>
-
-        <% end %>
-        </ul>
+    </div>
+    <!-- section body -->
+    <div class="row-fluid <%= hide_pr(category) %>">
+      <div class="span11 offset1">
+        <%= category_type(category).html_safe %>
       </div>
-      <% end %>
-      
     </div>
     <%= divider(category).html_safe %>
   <% end %>
+
+  </div><!-- inner container END -->
+
+</div><!-- right content main END -->
+
+
+<!-- loop goes here 
+<div class="accordion" id="accordion2">
+  
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+        Collapsible Group Item #1
+      </a>
+    </div>
+    <div id="collapseOne" class="accordion-body collapse">
+      <div class="accordion-inner">
+        Anim pariatur cliche...
+      </div>
+    </div>
+  </div>
+  
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+        Collapsible Group Item #2
+      </a>
+    </div>
+    <div id="collapseTwo" class="accordion-body collapse">
+      <div class="accordion-inner">
+        Anim pariatur cliche...
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+
+-->
+
+<button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#demo">
+  simple collapsible
+</button>
+ 
+<div id="demo" class="collapse in"> … </div>
+
+<a href="#link2" data-toggle="collapse" data-target="#link2">Link</a>
+<div id="link2" class="collapse">Hey you</div>
+
+
+
+
+
+  
 
   <%= link_to 'New Category', new_category_path %> | <%= link_to 'New Asset', new_asset_path %>
 

@@ -1,0 +1,3 @@
+ <div class="field">
+    <%= f.label :category_id %><br /><%= f.select(:category_id, Category.order("name").map { |c| [c.name, c.id] } ) %><br />
+ </div>

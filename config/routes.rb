@@ -1,7 +1,11 @@
 Aea2::Application.routes.draw do
 
+
   resources :categories
+  
+  match 'assets/select_category'
   resources :assets
+  
 
 
   # The priority is based upon order of creation:

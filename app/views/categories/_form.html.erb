@@ -29,13 +29,23 @@
 
  <div>
      <label class="radio">
-       <%= f.radio_button(:layout, "float") %>
-       Float right - assets will appear to the right
+       <%= f.radio_button(:layout, "2col-1col") %>
+       About Elec./AEA - links to files
      </label>
  
      <label class="radio">
-       <%= f.radio_button(:layout, "no float") %>
-       Inline - Assets will appear inline
+       <%= f.radio_button(:layout, "1col-2col") %>
+       Stories - Links to files
+     </label>
+
+     <label class="radio">
+       <%= f.radio_button(:layout, "1col-2col-faq") %>
+       FAQs - Links to files
+     </label>
+
+     <label class="radio">
+       <%= f.radio_button(:layout, "1col-2col-resources") %>
+       Resources - Links to URLs
      </label>
  </div>
 

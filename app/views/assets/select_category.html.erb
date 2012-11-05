@@ -1,0 +1,10 @@
+<%= form_for(@asset, :html => {:multipart => true}) do |f| %>
+	
+	<div class="field">
+    <%= f.label :category_id %><br /><%= f.select(:category_id, Category.order("name").map { |c| [c.name, c.id] } ) %><br />
+  </div>
+
+	<div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

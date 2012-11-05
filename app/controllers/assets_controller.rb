@@ -2,7 +2,7 @@ class AssetsController < ApplicationController
   # GET /assets
   # GET /assets.json
   def index
-    @assets = Asset.find(:all, :include => :category)
+    @assets = Asset.find(:all, :include => :category, order: 'name asc')
     @categories = Category.all(order: 'created_at')
     @category = Category.all
 
@@ -26,6 +26,11 @@ class AssetsController < ApplicationController
       format.html # show.html.erb
       format.json { render json: @asset }
     end
+  end
+
+  def select_category
+    @asset = Asset.new
+    @categories = Category.all
   end
 
   # GET /assets/new

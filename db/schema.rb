@@ -11,17 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121102203157) do
+ActiveRecord::Schema.define(:version => 20121104014514) do
 
   create_table "assets", :force => true do |t|
     t.string   "name"
     t.text     "description"
     t.integer  "category_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
     t.string   "slug"
     t.string   "aea_file"
     t.text     "excerpt"
+    t.string   "link_display_text"
+    t.string   "link_url"
+    t.text     "faq_question"
+    t.text     "faq_answer"
   end
 
   add_index "assets", ["slug"], :name => "index_assets_on_slug"
