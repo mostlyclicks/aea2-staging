@@ -73,7 +73,7 @@ module CategoriesHelper
 	        			end
 	        		end
 	        	end
-	        html << "<li class=\"float-links\"><a href\"#\">News Releases</a></li>"
+	        
 	        html << "</ul>
         	</div>"
 	    end
