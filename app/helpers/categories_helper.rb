@@ -33,7 +33,7 @@ module CategoriesHelper
 	          	<ul id=\"assets\">"
 	          	if category.assets.present?
 	          		category.assets.each do |ca|
-	          			if ca.asset_type == "img-for-news-release"
+	          			if ca.asset_type != "img-for-news-release"
 	          			html << "<li class=\"float-links\">#{link_to ca.name, ca.aea_file_url, target: '_blank'}</li>"
 	          			end
 	          		end
@@ -49,8 +49,8 @@ module CategoriesHelper
         	<div class=\"span8\">"
         		if category.assets.present?
         			category.assets.each do |ca|
-        				html << "<a href=\"##{'faq'+ca.id.to_s}\" data-toggle=\"collapse\" data-target=\"##{'faq'+ca.id.to_s}\">#{ca.faq_question}</a>"
-        				html << "<div id=\"#{'faq'+ca.id.to_s}\" class=\"collapse\">#{ca.faq_answer}</div>"
+        				html << "<a href=\"##{'faq'+ca.id.to_s}\" data-toggle=\"collapse\" data-target=\"##{'faq'+ca.id.to_s}\"><strong>#{ca.faq_question}</strong></a>"
+        				html << "<div id=\"#{'faq'+ca.id.to_s}\" class=\"collapse\" style=\"margin-bottom:20px;\">#{ca.faq_answer}</div>"
         			end
         		end
         	html << "</div>"			
