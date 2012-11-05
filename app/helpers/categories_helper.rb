@@ -18,7 +18,7 @@ module CategoriesHelper
 	          	<ul id=\"assets\">"
 	          		if category.assets.present?
 	          		category.assets.each do |ca|
-	          			html << "<li>#{link_to ca.name, ca.aea_file_url, target: '_blank'}</li>"
+	          			html << "<li style=\"width:100%\">#{link_to ca.name, ca.aea_file_url, target: '_blank'}</li>"
 	          		end
 	          	end 
 	         html << "</ul>
