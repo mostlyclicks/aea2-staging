@@ -51,9 +51,10 @@ module CategoriesHelper
         		if category.assets.present?
         			
         			category.assets.each do |ca|
+        				if ca.asset_type == "faq-question"
         				html << "<li width=\"100%\" class=\"question-links\"><a href=\"##{'faq'+ca.id.to_s}\" data-toggle=\"collapse\" data-target=\"##{'faq'+ca.id.to_s}\">#{ca.faq_question}</a>"
         				html << "<div id=\"#{'faq'+ca.id.to_s}\" class=\"collapse c-width\" style=\"margin-bottom:0em;color:#008fc5;background-color:#e6f4f9;padding-left:4px;\">#{ca.faq_answer}</div></li>"
-        			
+        				end
         			end
         			html << "</ul></div>"
         		end
