@@ -18,7 +18,7 @@ module CategoriesHelper
 	          	<ul id=\"assets\">"
 	          		if category.assets.present?
 	          		category.assets.each do |ca|
-	          			html << "<li class=\"float-links\">#{link_to ca.name, ca.aea_file_url, target: '_blank'}</li>"
+	          			html << "<li>#{link_to ca.name, ca.aea_file_url, target: '_blank'}</li>"
 	          		end
 	          	end 
 	         html << "</ul>
@@ -47,11 +47,15 @@ module CategoriesHelper
           		#{category.excerpt.to_s.html_safe}
         	</div>
         	<div class=\"span8\">"
+        	html << "<div style=\"margin-left:30px;\">"
         		if category.assets.present?
+        			
         			category.assets.each do |ca|
-        				html << "<a href=\"##{'faq'+ca.id.to_s}\" data-toggle=\"collapse\" data-target=\"##{'faq'+ca.id.to_s}\"><strong>#{ca.faq_question}</strong></a>"
-        				html << "<div id=\"#{'faq'+ca.id.to_s}\" class=\"collapse\" style=\"margin-bottom:20px;\">#{ca.faq_answer}</div>"
+        				html << "<a href=\"##{'faq'+ca.id.to_s}\" data-toggle=\"collapse\" data-target=\"##{'faq'+ca.id.to_s}\">#{ca.faq_question}</a>"
+        				html << "<div id=\"#{'faq'+ca.id.to_s}\" class=\"collapse\" style=\"margin-bottom:0em;color:#008fc5;background-color:#e6f4f9;padding-left:4px;\">#{ca.faq_answer}</div>"
+        			
         			end
+        			html << "</div>"
         		end
         	html << "</div>"			
 
