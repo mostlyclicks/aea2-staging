@@ -8,11 +8,6 @@ module CategoriesHelper
 	end
 
 
-	def do_something
-		"hello"
-	end
-
-
 	def category_type(category)
 		if category.layout == "2col-1col" #about elec/aea - links to files
 			"<div class=\"span8\">
@@ -69,18 +64,7 @@ module CategoriesHelper
 	        html << "</ul>
         	</div>"
 	    end
-	    	
-			
-
 	end
-
-
-
-
-
-
-
-
 
 
 	def hide_pr(category)
@@ -105,9 +89,6 @@ module CategoriesHelper
 			#{pr.excerpt}<br />
 			#{link_to 'See press release', '/assets/' + pr.slug}".html_safe
 
-			#pr.name
-			#pr.excerpt.html_safe
-			#pr.slug
 		end
 	end
 

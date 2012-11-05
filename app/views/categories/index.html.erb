@@ -7,8 +7,6 @@ ul#assets li {float:left;width:40%;}
 </style>
 
 
-
-
 <div class="row"><!-- right content main -->
   <div class="span7 black"><!-- inner container -->
   <% @categories.each do |category| %>
@@ -32,54 +30,7 @@ ul#assets li {float:left;width:40%;}
 </div><!-- right content main END -->
 
 
-<!-- loop goes here 
-<div class="accordion" id="accordion2">
-  
-  <div class="accordion-group">
-    <div class="accordion-heading">
-      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-        Collapsible Group Item #1
-      </a>
-    </div>
-    <div id="collapseOne" class="accordion-body collapse">
-      <div class="accordion-inner">
-        Anim pariatur cliche...
-      </div>
-    </div>
-  </div>
-  
-  <div class="accordion-group">
-    <div class="accordion-heading">
-      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-        Collapsible Group Item #2
-      </a>
-    </div>
-    <div id="collapseTwo" class="accordion-body collapse">
-      <div class="accordion-inner">
-        Anim pariatur cliche...
-      </div>
-    </div>
-  </div>
-  
-</div>
 
-
--->
-
-<button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#demo">
-  simple collapsible
-</button>
- 
-<div id="demo" class="collapse in"> … </div>
-
-<a href="#link2" data-toggle="collapse" data-target="#link2">Link</a>
-<div id="link2" class="collapse">Hey you</div>
-
-
-
-
-
-  
 
   <%= link_to 'New Category', new_category_path %> | <%= link_to 'New Asset', new_asset_path %>
 

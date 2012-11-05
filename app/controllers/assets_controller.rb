@@ -28,11 +28,6 @@ class AssetsController < ApplicationController
     end
   end
 
-  def select_category
-    @asset = Asset.new
-    @categories = Category.all
-  end
-
   # GET /assets/new
   # GET /assets/new.json
   def new
