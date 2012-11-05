@@ -19,7 +19,7 @@ class AssetsController < ApplicationController
     @categories = Category.all(order: 'created_at')
     #@assets = Asset.all
     
-    pr_category = Category.find_by_name('Press Releases')
+    pr_category = Category.find_by_name('News Releases')
     @pr_assets = Asset.find_all_by_category_id(pr_category.id)
 
     respond_to do |format|

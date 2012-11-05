@@ -68,13 +68,13 @@ module CategoriesHelper
 
 
 	def hide_pr(category)
-		if category.slug == 'press-releases'
+		if category.slug == 'news-releases'
 			"hidden"
 		end
 	end
 
 	def divider(category)
-		if category.slug == 'press-releases'
+		if category.slug == 'news-releases'
 			''
 		else
 			'<div style="border-top:1px solid #cdcdcd;margin:7px 30px 7px 50px;"></div>'
@@ -86,8 +86,11 @@ module CategoriesHelper
 			category.name
 			pr = category.assets.last
 			"<h5>#{pr.name}</h5>
-			#{pr.excerpt}<br />
-			#{link_to 'See press release', '/assets/' + pr.slug}".html_safe
+			#{pr.excerpt}<br /><br />
+			#{link_to 'See press release', '/assets/' + pr.slug}<br />
+			#{link_to 'News Release Archive', '/assets'}
+			".html_safe
+
 
 		end
 	end

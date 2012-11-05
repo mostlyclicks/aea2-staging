@@ -3,7 +3,7 @@ class CategoriesController < ApplicationController
   # GET /categories.json
   def index
     @categories = Category.all(order: 'created_at')
-    @category_pr = Category.find_by_slug("press-releases")
+    @category_pr = Category.find_by_id("news-releases")
     
     respond_to do |format|
       format.html # index.html.erb
@@ -18,6 +18,7 @@ class CategoriesController < ApplicationController
     @category = Category.find(params[:id])
     @assets = Asset.all
     @categories = Category.all(order: 'created_at')
+    @category_pr = Category.find_by_slug("news-releases")
 
     respond_to do |format|
       format.html # show.html.erb

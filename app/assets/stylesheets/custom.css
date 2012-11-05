@@ -25,9 +25,9 @@ ul#assets li.float-links {width:169px;margin-left:19px;}
 /*.faq {display:block;padding-bottom:3em;float:left;}*/
 
 #sb_box {width:220px;padding:15px;margin:15px 0 0 30px;color:#fff;
-		-moz-box-shadow:    -6px 6px 12px 0px #037db1;
+		/*-moz-box-shadow:    -6px 6px 12px 0px #037db1;
   		-webkit-box-shadow: -6px 6px 12px 0px #037db1;
-  		box-shadow:         -6px 6px 12px 0px #037db1;}
+  		box-shadow:         -6px 6px 12px 0px #037db1;*/}
 #sb_box a, #sb_box a:visited {color:#fff;}
 #sb_box a:hover {background-color:transparent;}
 .rightNav {float:right;margin-top:0px;padding-left:0px;margin-left:0px;}

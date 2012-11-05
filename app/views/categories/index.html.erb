@@ -8,7 +8,7 @@ ul#assets li {float:left;width:40%;}
 
 
 <div class="row"><!-- right content main -->
-  <div class="span7 black"><!-- inner container -->
+  <div class="span7"><!-- inner container -->
   <% @categories.each do |category| %>
     <!-- h3 section title -->
     <div class="row-fluid <%= hide_pr(category) %>">
@@ -24,9 +24,7 @@ ul#assets li {float:left;width:40%;}
     </div>
     <%= divider(category).html_safe %>
   <% end %>
-
   </div><!-- inner container END -->
-
 </div><!-- right content main END -->
 
 
@@ -34,6 +32,11 @@ ul#assets li {float:left;width:40%;}
 
   <%= link_to 'New Category', new_category_path %> | <%= link_to 'New Asset', new_asset_path %>
 
+<% @categories.each do |category| %>
+  <% content_for :sb_box do %>
+          <%= pr_category(category) %>
+  <% end %>
+<% end %>
 
 
 
