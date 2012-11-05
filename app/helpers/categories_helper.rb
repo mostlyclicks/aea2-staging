@@ -10,16 +10,20 @@ module CategoriesHelper
 
 	def category_type(category)
 		if category.layout == "2col-1col" #about elec/aea - links to files
-			"<div class=\"span8\">
+			html = ""
+			html << "<div class=\"span8\">
           		#{category.excerpt.to_s.html_safe}
         	</div>
         	<div class=\"span4\">
-	          	<ul id=\"assets\">
-
-	            	<li style=\"width:100%;\">about elec/aea</li>
-	            	<li style=\"width:100%;\">Month</li>
-	          	</ul>
+	          	<ul id=\"assets\">"
+	          		if category.assets.present?
+	          		category.assets.each do |ca|
+	          			html << "<li class=\"float-links\">#{link_to ca.name, ca.aea_file_url, target: '_blank'}</li>"
+	          		end
+	          	end 
+	         html << "</ul>
         	</div>"
+        	
 		elsif category.layout == "1col-2col" #stories - links to files
 			html = ""
 			html << "<div class=\"span4\">
@@ -32,7 +36,7 @@ module CategoriesHelper
 	          			html << "<li class=\"float-links\">#{link_to ca.name, ca.aea_file_url, target: '_blank'}</li>"
 	          		end
 	          	end 
-	        html << "</ul>
+	        "</ul>
         	</div>"
 
 		elsif category.layout == "1col-2col-faq" #faqs - links to unhide answers
