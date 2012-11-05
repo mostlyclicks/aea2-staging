@@ -101,7 +101,7 @@ module CategoriesHelper
 			"<h5>#{pr.name}</h5>
 			<small>#{pr.created_at.strftime('%B, %e %Y')}</small><br />
 			#{pr.excerpt}<br /><br />
-			#{link_to 'See press release', '/assets/' + pr.slug}<br />
+			#{link_to 'See news release', '/assets/latest_news_release' }<br />
 			".html_safe
 
 

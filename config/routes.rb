@@ -8,6 +8,7 @@ Aea2::Application.routes.draw do
   match 'assets/show_logos'
   match 'assets/show_news_release_images'
   match 'assets/show_news_archives'
+  match 'assets/latest_news_release'
   resources :assets
   
 

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+<div class="span7">
+	<div class="row-fluid">
+		<div class="span11 offset1">
+			<div class="span8">
+				<h3>Latest News Release</h3>
+				<h1><%= @latest_news.name %></h1>
+				<%= @latest_news.description.html_safe %>
+				<%= image_tag @latest_news.aea_file_url(:thumb) %><br />
+				<%= link_to 'Download PDF', @latest_news.aea_file_url %>
+				 
+</div>
+<div class="span4">
+	<ul id="assets" class="topMargin" style="padding-top:110px;float:left;">
+		<% @assets.each do |a| %>
+			<li><%= link_to a.name, a.aea_file_url, target: '_blank' %></li>
+		<% end %>
+	</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<% @categories.each do |category| %>
+  <% content_for :sb_box do %>
+          <%= pr_category(category) %>
+  <% end %>
+<% end %>
