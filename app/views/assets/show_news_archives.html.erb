@@ -5,6 +5,7 @@ ul#assets li {float:left;width:40%;}
 .red1 {border-top:1px solid red;}
 .black {border:1px solid black;}
 </style>
+<p id="notice"><%= notice %></p>
 
 <div class="row"><!-- right content main -->
   <div class="span7 black"><!-- inner container -->
@@ -23,3 +24,9 @@ ul#assets li {float:left;width:40%;}
 	</div>
 	</div>
 </div>
+
+<% @categories.each do |category| %>
+  <% content_for :sb_box do %>
+          <%= pr_category(category) %>
+  <% end %>
+<% end %>
