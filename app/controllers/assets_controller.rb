@@ -12,6 +12,12 @@ class AssetsController < ApplicationController
     end
   end
 
+  def latest_news_release
+    category_pr = Category.find_by_slug("news-releases")
+    @assets = Asset.find_all_by_category_id(category_pr.id)
+    @latest_news = @assets.last
+  end
+
   def show_images
     @assets = Asset.find_all_by_asset_type('images')
     @categories = Category.all
