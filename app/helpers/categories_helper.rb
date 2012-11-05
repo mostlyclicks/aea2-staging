@@ -33,7 +33,9 @@ module CategoriesHelper
 	          	<ul id=\"assets\">"
 	          	if category.assets.present?
 	          		category.assets.each do |ca|
+	          			if ca.asset_type == "img-for-news-release"
 	          			html << "<li class=\"float-links\">#{link_to ca.name, ca.aea_file_url, target: '_blank'}</li>"
+	          			end
 	          		end
 	          	end 
 	        html << "</ul>
