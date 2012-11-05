@@ -1,0 +1,25 @@
+<style>
+/*dl {width:100px;border:1px solid red;float:left;width:50%;}
+ul#assets li {list-style-image:url(/assets/li-arrow.png);}*/
+ul#assets li {float:left;width:40%;}
+.red1 {border-top:1px solid red;}
+.black {border:1px solid black;}
+</style>
+
+<div class="row"><!-- right content main -->
+  <div class="span7 black"><!-- inner container -->
+  	<div class="row-fluid ">
+  	<% unless @assets.nil? %>
+		<% @assets.each do |a| %>
+  	
+  			<div class="offset1 span11 ">
+				<div class="span8 red1">
+				<p><%= link_to a.name, a %><%= link_to 'Download PDF', a.aea_file_url %><br />
+				</div>
+			</div>
+	
+	<% end %>
+	<% end %>
+	</div>
+	</div>
+</div>

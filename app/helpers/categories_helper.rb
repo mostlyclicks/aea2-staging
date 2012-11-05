@@ -86,9 +86,9 @@ module CategoriesHelper
 			category.name
 			pr = category.assets.last
 			"<h5>#{pr.name}</h5>
+			<small>#{pr.created_at.strftime('%B, %e %Y')}</small><br />
 			#{pr.excerpt}<br /><br />
 			#{link_to 'See press release', '/assets/' + pr.slug}<br />
-			#{link_to 'News Release Archive', '/assets'}
 			".html_safe
 
 

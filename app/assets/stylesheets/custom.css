@@ -39,6 +39,8 @@ ul#assets li.float-links {width:169px;margin-left:19px;}
 
 .show_content {margin:50px 0px 0 50px;width:587px;}
 .image-link:hover {background-color: transparent;}
+.red1 {border-top:1px solid red;}
+.black {border:1px solid black;}
 
  li a:hover {color:#000;background-color: transparent;}
  th {text-align:left;}

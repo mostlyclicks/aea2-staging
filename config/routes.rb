@@ -4,6 +4,10 @@ Aea2::Application.routes.draw do
   resources :categories
   
   match 'assets/select_category'
+  match 'assets/show_images'
+  match 'assets/show_logos'
+  match 'assets/show_news_release_images'
+  match 'assets/show_news_archives'
   resources :assets
   
 

@@ -18,7 +18,23 @@
   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name, class: 'span6' %>
- </div>
+  </div>
+
+  <div class="field">
+    <label>Image/Upload Type</label>
+    <label class="radio">
+      <%= f.radio_button(:asset_type, "img-for-news-release") %>
+      Images for News Releases
+    </label>
+    <label class="radio">
+      <%= f.radio_button(:asset_type, "images") %>
+      Images
+    </label>
+    <label class="radio">
+      <%= f.radio_button(:asset_type, "logos") %>
+      Logos
+    </label>
+  </div><br />
 
   <div class="field">
     <%= f.label :category_id %><br /><%= f.select(:category_id, Category.order("name").map { |c| [c.name, c.id] } ) %><br />

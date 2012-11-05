@@ -12,6 +12,24 @@ class AssetsController < ApplicationController
     end
   end
 
+  def show_images
+    @assets = Asset.find_all_by_asset_type('images')
+  end
+
+  def show_news_images
+    @assets = Asset.find_all_by_asset_type('img-for-news-release')
+  end
+
+  def show_logos
+    @assets = Asset.find_all_by_asset_type('logos')
+  end
+
+  def show_news_archives
+    category_pr = Category.find_by_slug("news-releases")
+    
+    @assets = Asset.find_all_by_category_id(category_pr.id)
+  end
+
   # GET /assets/1
   # GET /assets/1.json
   def show
