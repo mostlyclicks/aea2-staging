@@ -47,7 +47,7 @@ module CategoriesHelper
           		#{category.excerpt.to_s.html_safe}
         	</div>
         	<div class=\"span8\">"
-        	html << "<div style=\"margin-left:30px;\"><ul id=\"assets\">"
+        	html << "<div style=\"margin-left:30px;\"><ul id=\"assets\" style=\"margin-top:-9px;\">"
         		if category.assets.present?
         			
         			category.assets.each do |ca|
@@ -88,10 +88,10 @@ module CategoriesHelper
 	end
 
 	def divider(category)
-		if category.slug == 'news-releases'
+		if category.slug == 'news-releases' || category.slug == 'resources'
 			''
 		else
-			'<div style="border-top:1px solid #cdcdcd;margin:7px 30px 7px 50px;"></div>'
+			'<div style="border-top:1px solid #cdcdcd;margin:0px 30px -7px 50px;"></div>'
 		end
 	end
 
@@ -100,7 +100,6 @@ module CategoriesHelper
 			category.name
 			pr = category.assets.last
 			"<h5>#{pr.name}</h5>
-			<small>#{pr.created_at.strftime('%B, %e %Y')}</small><br />
 			#{pr.excerpt}<br /><br />
 			#{link_to 'See news release', '/assets/latest_news_release' }<br />
 			".html_safe
