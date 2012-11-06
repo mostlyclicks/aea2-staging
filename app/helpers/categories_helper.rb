@@ -29,17 +29,18 @@ module CategoriesHelper
 			html << "<div class=\"span4\">
           		#{category.excerpt.to_s.html_safe}
         	</div>
-        	<div class=\"span8 float-right\">
-	          	<ul id=\"assets\">"
-	          	if category.assets.present?
-	          		category.assets.each do |ca|
-	          			if ca.asset_type != "img-for-news-release"
-	          			html << "<li class=\"float-links\">#{link_to ca.name, ca.aea_file_url, target: '_blank'}</li>"
-	          			end
-	          		end
-	          	end 
-	        html << "</ul>
-        	</div>"
+
+        	<div class=\"span8\">"
+        	html << "<div style=\"margin-left:30px;\"><ul id=\"assets\" style=\"margin-top:-9px;\">"
+        		if category.assets.present?
+        			category.assets.each do |ca|
+        				if ca.asset_type != "img-for-news-release"
+        				html << "<li width=\"100%\" class=\"question-links\">#{link_to ca.name, ca.aea_file_url, target: '_blank'}</li>"
+        				end
+        			end
+        			html << "</ul></div>"
+        		end
+        	html << "</div>"
 
 		elsif category.layout == "1col-2col-faq" #faqs - links to unhide answers
 			html = ""
