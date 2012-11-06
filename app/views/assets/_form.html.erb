@@ -16,8 +16,13 @@
   <%#= render "#{@asset.current_step}_step", :f => f %>
 
   <div class="field">
-    <%= f.label :name %><br />
+    <label><%#= f.label :name %>Title (Full or long Title)</label><br />
     <%= f.text_field :name, class: 'span6' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :short_title %><br />
+    <%= f.text_field :short_title, class: 'span6' %>
   </div>
 
   <div class="field">

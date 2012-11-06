@@ -6,7 +6,7 @@
       <div class="offset1 span11">
         <div class="span8">
           <h1><%= @asset.name %></h1>
-          <small><%= @asset.created_at.strftime('%B, %e %Y')%></small><br />
+          
           <%= @asset.description.html_safe %>
           <br />
           <% if @asset.aea_file? %>
@@ -22,7 +22,7 @@
           
           <ul id="assets" style="padding-top:72px;">
           <% @pr_assets.each do |pr| %>
-            <li><%= link_to pr.name, pr.aea_file_url, target: '_blank' %></li>
+            <li><%= link_to pr.short_title, pr.aea_file_url, target: '_blank' %></li>
           <% end %>
         </ul>
         </div>
