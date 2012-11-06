@@ -31,7 +31,7 @@ module CategoriesHelper
         	</div>
 
         	<div class=\"span8\">"
-        	html << "<div style=\"margin-left:30px;\"><ul id=\"assets\" style=\"margin-top:-9px;\">"
+        	html << "<div style=\"margin-left:30px;\"><ul id=\"assets\" style=\"margin-top:-11px;\">"
         		if category.assets.present?
         			category.assets.each do |ca|
         				if ca.asset_type != "img-for-news-release"
@@ -48,7 +48,7 @@ module CategoriesHelper
           		#{category.excerpt.to_s.html_safe}
         	</div>
         	<div class=\"span8\">"
-        	html << "<div style=\"margin-left:30px;\"><ul id=\"assets\" style=\"margin-top:-9px;\">"
+        	html << "<div style=\"margin-left:30px;\"><ul id=\"assets\" style=\"margin-top:-11px;\">"
         		if category.assets.present?
         			
         			category.assets.each do |ca|
@@ -107,7 +107,7 @@ module CategoriesHelper
 				".html_safe
 			end
 		else
-			"Carlos"
+			""
 		end
 	end
 
