@@ -96,15 +96,17 @@ module CategoriesHelper
 	end
 
 	def pr_category(category)
-		if category.slug == 'news-releases'
-			category.name
-			pr = category.assets.last
-			"<h5>#{pr.name}</h5>
-			#{pr.excerpt}<br /><br />
-			#{link_to 'See news release', '/assets/latest_news_release' }<br />
-			".html_safe
-
-
+		if @current_action != 'latest_news_release'
+			if category.slug == 'news-releases'
+				category.name
+				pr = category.assets.last
+				"<h5>#{pr.name}</h5>
+				#{pr.excerpt}<br /><br />
+				#{link_to 'See news release', '/assets/latest_news_release' }<br />
+				".html_safe
+			end
+		else
+			"Carlos"
 		end
 	end
 

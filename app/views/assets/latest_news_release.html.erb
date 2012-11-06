@@ -13,7 +13,8 @@
 				 
 </div>
 <div class="span4">
-	<ul id="assets" class="topMargin" style="padding-top:110px;float:left;">
+	<h3 style="padding-top:99px;">News Release Archive</h3>
+	<ul id="assets" class="topMargin" style="float:left;padding-top:0;margin-left:12px;">
 		<% @assets.each do |a| %>
 			<li><%= link_to a.name, a.aea_file_url, target: '_blank' %></li>
 		<% end %>
