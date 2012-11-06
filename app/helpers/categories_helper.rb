@@ -92,7 +92,7 @@ module CategoriesHelper
 		if category.slug == 'news-releases' || category.slug == 'resources'
 			''
 		else
-			'<div style="border-top:1px solid #cdcdcd;margin:0px 30px -7px 50px;"></div>'
+			'<div style="border-top:1px solid #cdcdcd;margin:7px 30px -7px 50px;"></div>'
 		end
 	end
 

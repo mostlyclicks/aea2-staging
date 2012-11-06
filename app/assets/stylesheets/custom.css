@@ -9,7 +9,7 @@ body {background: url('/assets/background2.gif') no-repeat center center fixed;
 .container {width:980px;margin-top:0;padding-bottom:20px;}
 #content {background:url(/assets/main-bg.gif) 0 0 repeat-y #fff;}
 #header {display:block;background:url(/assets/top-bg.jpg) 0 0 #fff;}
-#main {background:url(/assets/blue-gradient.png) 331px 0 no-repeat;}
+#main {background:url(/assets/blue-gradient.png) 330px 0 no-repeat;}
 
 h3, h1 {color:#008fc5;font-family:Palatino, times, serif;font-size:1.4em;font-weight:100;margin:0;padding-top:15px;}
 h3 a, h3 a:visited {color:#008fc5;}
