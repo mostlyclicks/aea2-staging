@@ -15,7 +15,7 @@ class AssetsController < ApplicationController
   def latest_news_release
     category_pr = Category.find_by_slug("news-releases")
     @assets = Asset.find_all_by_category_id(category_pr.id, order: 'created_at desc')
-    @latest_news = @assets.last
+    @latest_news = @assets.first
     @categories = Category.all(order: 'created_at desc')
   end
 
