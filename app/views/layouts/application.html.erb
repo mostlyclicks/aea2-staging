@@ -20,7 +20,7 @@
 	<div class="row" id="main">
 	<div id="sidebar" class="span3">
 		<%= image_tag 'side-tag.png' %>
-		<%= image_tag 'orange-ribbon-3.png', style: 'min-width:329px;min-height:66px;'%>
+		<%= link_to image_tag('orange-ribbon-3.png', class: 'ribbon' ), action: 'latest_news_release', controller: 'assets' %>
 
 		<div id="sb_box">
 			<%= yield :sb_box %>
@@ -35,11 +35,11 @@
 <div class="container" id="footer" style="">
 	<div class="row">
 		<div class="span1">
-			<%= link_to (image_tag 'footer-fb.png', alt: 'Facebook', id: 'facebook'), 'http://www.facebook.com' %>
+			<%= link_to (image_tag 'footer-fb.png', alt: 'Facebook', id: 'facebook'), 'http://www.facebook.com/AEAPublic?ref=ts&fref=ts' %>
 		</div>
 		<div class="span7">
-			<p>General Information: <%= mail_to 'infoaea@electrology.com', 'infoaea@electrology.com' %><br />
-			Media Inquiries: <%= mail_to 'mediaaea@electrology.com', 'mediaaea@electrology.com' %></p>
+			<p>
+			Media Inquiries: <%= mail_to 'kerstin@vendiadvertising.com, justin@vendiadvertising.com', 'mediaaea@electrologymedia.com' %></p>
 
 		</div>
 	</div>

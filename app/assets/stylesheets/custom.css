@@ -26,6 +26,8 @@ ul#assets li.question-links {width:400px;margin-left:-10px;}
 .c-width {width:330px;}
 /*li {}*/
 .rightBorder {border-right:1px solid #cdcdcd;}
+#sidebar a:hover {background-color:transparent;}
+.ribbon {min-width:329px;min-height:66px;}
 /*.faq {display:block;padding-bottom:3em;float:left;}*/
 
 #sb_box {width:220px;padding:15px;margin:15px 0 0 30px;color:#fff;
