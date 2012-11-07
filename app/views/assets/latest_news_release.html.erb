@@ -16,7 +16,7 @@
 	<h3 style="padding-top:73px;">News Release Archive</h3>
 	<ul id="assets" class="topMargin" style="float:left;padding-top:0;margin-left:12px;">
 		<% @assets.each do |a| %>
-			<li><%= link_to a.short_title, a.aea_file_url, target: '_blank' %></li>
+			<li class="red1"><%= link_to a.short_title, a.aea_file_url, target: '_blank' %></li>
 		<% end %>
 	</ul>
 </div>

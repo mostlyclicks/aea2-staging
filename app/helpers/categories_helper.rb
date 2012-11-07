@@ -104,7 +104,7 @@ module CategoriesHelper
 				"<h5>#{pr.name}</h5>
 				#{pr.excerpt}<br /><br />
 				<ul id=\"assets\" style=\"margin-left:15px;\">
-				<li style=\"width:100%;margin-left:0px;\">#{link_to 'See news release', '/assets/latest_news_release' }</li>
+				<li style=\"width:100%;margin-left:0px;\"><strong>#{link_to 'See news release', '/assets/latest_news_release' }</strong></li>
 				</ul>
 				<br />
 				".html_safe
