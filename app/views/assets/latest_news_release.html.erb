@@ -9,7 +9,7 @@
 				<h1><%= @latest_news.name %></h1>
 				<%= @latest_news.description.html_safe %>
 				<%= image_tag @latest_news.aea_file_url(:thumb) %><br /><br />
-				<%= link_to 'Download PDF', @latest_news.aea_file_url %>
+				<%= link_to 'Download PDF', @latest_news.aea_file_url, target: '_blank' %>
 				 
 </div>
 <div class="span4">

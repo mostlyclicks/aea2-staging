@@ -71,7 +71,11 @@ module CategoriesHelper
 	          	if category.assets.present?
 	        		category.assets.each do |ca|
 	        			if ca.asset_type == "links"
-	        			html << "<li class=\"float-links\">#{link_to ca.link_display_text, ca.link_url }</li>"
+	        				if ca.link_url == "https://aea2-assets.s3.amazonaws.com/uploads/AEA-BrandStandards-summer2012-v2.pdf"
+	        					html << "<li class=\"float-links\">#{link_to ca.link_display_text, ca.link_url, target: '_blank' }</li>"
+	        				else
+	        					html << "<li class=\"float-links\">#{link_to ca.link_display_text, ca.link_url }</li>"
+	        				end
 	        			end
 	        		end
 	        	end
@@ -104,7 +108,7 @@ module CategoriesHelper
 				"<h5>#{pr.name}</h5>
 				#{pr.excerpt}<br /><br />
 				<ul id=\"assets\" style=\"margin-left:15px;\">
-				<li style=\"width:100%;margin-left:0px;\"><strong>#{link_to 'See news release', '/assets/latest_news_release' }</strong></li>
+				<li style=\"width:100%;margin-left:0px;\"><strong>#{link_to 'News release archive', '/assets/latest_news_release' }</strong></li>
 				</ul>
 				<br />
 				".html_safe

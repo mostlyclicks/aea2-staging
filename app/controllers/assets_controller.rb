@@ -20,7 +20,7 @@ class AssetsController < ApplicationController
   end
 
   def show_images
-    @assets = Asset.find_all_by_asset_type('images')
+    @assets_images = Asset.find_all_by_asset_type('images')
     @categories = Category.all
     #@category_pr = Category.find_by_slug("news-releases")
   end
@@ -31,7 +31,7 @@ class AssetsController < ApplicationController
   end
 
   def show_logos
-    @assets = Asset.find_all_by_asset_type('logos')
+    @assets_logos = Asset.find_all_by_asset_type('logos')
     @categories = Category.all
      @category_pr = Category.find_by_slug("news-releases")
   end
