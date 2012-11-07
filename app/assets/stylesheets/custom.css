@@ -13,7 +13,7 @@ body {background: url('/assets/background2.gif') no-repeat center center fixed;
 
 h3, h1 {color:#0491c6;font-family:Palatino, times, serif;font-size:1.4em;font-weight:100;margin:0;padding-top:15px;}
 h1 {line-height:1.20em;}
-a {color:#0491c6;}
+a {color:#6d6e71;}
 a:visited {color:#f15c22;}
 h3 a, h3 a:visited {color:#0491c6;}
 h3 a:hover {background-color:transparent;}
