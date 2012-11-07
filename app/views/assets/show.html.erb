@@ -10,7 +10,7 @@
           <%= @asset.description.html_safe %>
           <br />
           <% if @asset.aea_file? %>
-            <%= image_tag @asset.aea_file_url(:thumb) %><br />
+            <%= image_tag @asset.aea_file_url(:medium) %><br />
             <%= link_to 'Download', @asset.aea_file_url %>
           <% end %>
                 <p><%= link_to 'Edit', edit_asset_path(@asset) %> |

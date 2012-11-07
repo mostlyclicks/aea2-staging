@@ -9,11 +9,9 @@
 				<h1>Image Library for Electrolysis Stories</h1>
 				<p>Download these high-resolution images for use with their respective <a href="/">electrolysis stories.</a></p>
 <% unless @assets_news.nil? %>
-<ul id="img_assets" style="display:inline-block;" class="span4">
 	<% @assets_news.each do |a| %>
-	<li style="display:block;text-align:center;"><%= image_tag a.aea_file_url(:thumb) %><br /><%= link_to a.name, a.aea_file_url %> </li>
+		<div class="span5" style="display:block;text-align:center;border:1px solid #e2e2e2;margin:0 10px 10px 0;"><%= image_tag a.aea_file_url(:medium) %><br /><%= link_to a.name, a.aea_file_url %> </div>
 	<% end %>
-</ul>
 <% end %>
 </div>
 <div class="span4">
