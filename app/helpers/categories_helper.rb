@@ -92,7 +92,7 @@ module CategoriesHelper
 		if category.slug == 'news-releases' || category.slug == 'resources'
 			''
 		else
-			'<div style="border-top:1px solid #cdcdcd;margin:7px 30px -7px 50px;"></div>'
+			'<div style="border-top:1px solid #6d6e71;margin:7px 30px -7px 50px;"></div>'
 		end
 	end
 
@@ -103,7 +103,10 @@ module CategoriesHelper
 				pr = category.assets.last
 				"<h5>#{pr.name}</h5>
 				#{pr.excerpt}<br /><br />
-				#{link_to 'See news release', '/assets/latest_news_release' }<br />
+				<ul id=\"assets\" style=\"margin-left:15px;\">
+				<li style=\"width:100%;margin-left:0px;\">#{link_to 'See news release', '/assets/latest_news_release' }</li>
+				</ul>
+				<br />
 				".html_safe
 			end
 		else
