@@ -8,12 +8,9 @@
 				<h1>Images</h1>
 				<p>These images are provided for editorial and promotional use by members of the American Electrology Association and the media. Please read <a href="https://aea2-assets.s3.amazonaws.com/uploads/AEA-BrandStandards-summer2012-v2.pdf" target="_blank">AEA Logo Usage Guidelines (pdf)</a> for acceptable use of these images. </p>
 <% unless @assets_images.nil? %>
-	
 	<% @assets_images.each do |a| %>
 		<div class="span5" style="display:block;text-align:center;border:1px solid #e2e2e2;margin:0 10px 10px 0;"><%= image_tag a.aea_file_url(:medium) %><br /><%= link_to a.name, a.aea_file_url %> </div>
 	<% end %>
-		
-
 <% end %>
 </div>
 <div class="span4">
