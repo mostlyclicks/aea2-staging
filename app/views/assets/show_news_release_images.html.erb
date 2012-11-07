@@ -8,9 +8,9 @@
 			<div class="span8">
 				<h1>Image Library for Electrolysis Stories</h1>
 				<p>Download these high-resolution images for use with their respective <a href="/">electrolysis stories.</a></p>
-<% unless @assets.nil? %>
+<% unless @assets_news.nil? %>
 <ul id="img_assets" style="display:inline-block;" class="span4">
-	<% @assets.each do |a| %>
+	<% @assets_news.each do |a| %>
 	<li style="display:block;text-align:center;"><%= image_tag a.aea_file_url(:thumb) %><br /><%= link_to a.name, a.aea_file_url %> </li>
 	<% end %>
 </ul>

@@ -25,8 +25,8 @@ class AssetsController < ApplicationController
     #@category_pr = Category.find_by_slug("news-releases")
   end
 
-  def show_news_images
-    @assets = Asset.find_all_by_asset_type('img-for-news-release')
+  def show_news_release_images
+    @assets_news = Asset.find_all_by_asset_type('img-for-news-release')
      @category_pr = Category.find_by_slug("news-releases")
   end
 
