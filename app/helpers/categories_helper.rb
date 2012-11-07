@@ -72,7 +72,7 @@ module CategoriesHelper
 	        		category.assets.each do |ca|
 	        			if ca.asset_type == "links"
 	        				if ca.link_url == "https://aea2-assets.s3.amazonaws.com/uploads/AEA-BrandStandards-summer2012-v2.pdf"
-	        					html << "<li class=\"float-links\">#{link_to ca.link_display_text, ca.link_url, target: '_blank' }</li>"
+	        					html << "<li class=\"float-links\">#{link_to ca.link_display_text, ca.link_url, target: '_blank'}</li>"
 	        				else
 	        					html << "<li class=\"float-links\">#{link_to ca.link_display_text, ca.link_url }</li>"
 	        				end
