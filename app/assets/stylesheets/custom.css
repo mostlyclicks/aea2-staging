@@ -26,6 +26,8 @@ ul.topMargin {padding-top:56px;}
 ul#assets li {padding:0;float:right;list-style-image:url(/assets/li-arrow.png);margin-bottom:.75em;margin-right:0px;}
 ul#assets li.float-links {width:169px;margin-left:19px;}
 ul#assets li.question-links {width:400px;margin-left:-10px;}
+ul#assets li.question-links a {color:#0491c6;}
+ul#assets li.question-links a:visited {color:#f15c22;}
 .c-width {width:330px;}
 /*li {}*/
 .rightBorder {border-right:1px solid #cdcdcd;}
