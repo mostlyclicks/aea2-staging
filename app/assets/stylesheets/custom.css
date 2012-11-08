@@ -46,6 +46,7 @@ ul#assets li.question-links {width:400px;margin-left:-10px;}
 #footer a, #footer a:visited {color:#e2e2e2;} 
 #footer a:hover {background-color: transparent;}
 
+
 .show_content {margin:50px 0px 0 50px;width:587px;}
 .image-link:hover {background-color: transparent;}
 .red1 {border-top:1px solid red;}
@@ -59,3 +60,6 @@ ul#assets li.question-links {width:400px;margin-left:-10px;}
 a {color:#0491c6;}
 a:visited {color:#6d6e71 !IMPORTANT;}
 li a:visited {color:#f15c22;}
+
+ul#assets li a.sb-release-link {color:#ffffff !IMPORTANT;}
+ul#assets li a.sb-release-link:visited {color:#ffffff !IMPORTANT;}
