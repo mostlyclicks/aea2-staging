@@ -57,8 +57,8 @@ ul#assets li.question-links {width:400px;margin-left:-10px;}
  label {margin:20px 0 -18px 0 ;}
  input {margin:0;}
 
-a {color:#0491c6;}
-a:visited {color:#6d6e71 !IMPORTANT;}
+a {color:#0491c6 !IMPORTANT;}
+a:visited {color:#f15c22 !IMPORTANT;}
 li a:visited {color:#f15c22;}
 
 ul#assets li a.sb-release-link {color:#ffffff !IMPORTANT;}
