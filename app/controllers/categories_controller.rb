@@ -27,6 +27,10 @@ class CategoriesController < ApplicationController
     @categories = Category.all(order: 'created_at')
     @category_pr = Category.find_by_slug("news-releases")
 
+    category_pr = Category.find_by_name('News Releases')
+    @ln_assets = Asset.find_all_by_category_id(category_pr.id, order: 'date_published desc')
+    @latest_news = @ln_assets.first
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @category }
@@ -38,6 +42,10 @@ class CategoriesController < ApplicationController
   def new
     @category = Category.new
 
+    category_pr = Category.find_by_name('News Releases')
+    @ln_assets = Asset.find_all_by_category_id(category_pr.id, order: 'date_published desc')
+    @latest_news = @ln_assets.first
+
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @category }
@@ -47,6 +55,10 @@ class CategoriesController < ApplicationController
   # GET /categories/1/edit
   def edit
     @category = Category.find(params[:id])
+
+    category_pr = Category.find_by_name('News Releases')
+    @ln_assets = Asset.find_all_by_category_id(category_pr.id, order: 'date_published desc')
+    @latest_news = @ln_assets.first
   end
 
   # POST /categories
