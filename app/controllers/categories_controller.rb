@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+  http_basic_authenticate_with :name => HTTP_NAME, :password => HTTP_PASS, :only => [:new, :edit]
   # GET /categories
   # GET /categories.json
   def index

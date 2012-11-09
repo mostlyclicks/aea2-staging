@@ -1,4 +1,6 @@
 class AssetsController < ApplicationController
+
+  http_basic_authenticate_with :name => HTTP_NAME, :password => HTTP_PASS, :only => [:new, :edit, :index]
   # GET /assets
   # GET /assets.json
   def index
