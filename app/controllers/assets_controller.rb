@@ -8,6 +8,10 @@ class AssetsController < ApplicationController
     @categories = Category.all(order: 'created_at')
     @category = Category.all
 
+    category_pr = Category.find_by_name('News Releases')
+    @assets = Asset.find_all_by_category_id(category_pr.id, order: 'date_published desc')
+    @latest_news = @assets.first
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @assets }
@@ -59,7 +63,7 @@ class AssetsController < ApplicationController
     @categories = Category.all(order: 'created_at')
     #@assets = Asset.all
     
-    pr_category = Category.find_by_name('News Releases')
+    category_pr = Category.find_by_name('News Releases')
     @assets = Asset.find_all_by_category_id(category_pr.id, order: 'date_published desc')
     @latest_news = @assets.first
 
