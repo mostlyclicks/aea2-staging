@@ -6,6 +6,7 @@ class CategoriesController < ApplicationController
     @categories = Category.all(order: 'created_at')
     @category_pr = Category.find_by_id("news-releases")
     
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @categories }

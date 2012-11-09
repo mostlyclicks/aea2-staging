@@ -104,7 +104,7 @@ module CategoriesHelper
 		if @current_action != 'latest_news_release'
 			if category.slug == 'news-releases'
 				category.name
-				pr = category.assets.first
+				pr = category.assets.last
 				"<h5>#{pr.name}</h5>
 				#{pr.excerpt}<br /><br />
 				<ul id=\"assets\" style=\"margin-left:15px;\">
