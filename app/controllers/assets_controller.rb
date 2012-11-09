@@ -78,6 +78,10 @@ class AssetsController < ApplicationController
   def new
     @asset = Asset.new
 
+    category_pr = Category.find_by_name('News Releases')
+    @ln_assets = Asset.find_all_by_category_id(category_pr.id, order: 'date_published desc')
+    @latest_news = @ln_assets.first
+
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @asset }
