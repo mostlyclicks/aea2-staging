@@ -24,12 +24,15 @@ class AssetsController < ApplicationController
   def show_images
     @assets_images = Asset.find_all_by_asset_type('images')
     @categories = Category.all
+    category_pr = Category.find_by_slug("news-releases")
     #@category_pr = Category.find_by_slug("news-releases")
+    @assets = Asset.find_all_by_category_id(category_pr.id, order: 'date_published desc')
+    @latest_news = @assets.first
   end
 
   def show_news_release_images
     @assets_news = Asset.find_all_by_asset_type('img-for-news-release')
-     @category_pr = Category.find_by_slug("news-releases")
+     category_pr = Category.find_by_slug("news-releases")
      @assets = Asset.find_all_by_category_id(category_pr.id, order: 'date_published desc')
     @latest_news = @assets.first
   end
@@ -37,7 +40,7 @@ class AssetsController < ApplicationController
   def show_logos
     @assets_logos = Asset.find_all_by_asset_type('logos')
     @categories = Category.all
-     @category_pr = Category.find_by_slug("news-releases")
+     category_pr = Category.find_by_slug("news-releases")
      @assets = Asset.find_all_by_category_id(category_pr.id, order: 'date_published desc')
     @latest_news = @assets.first
   end
