@@ -60,7 +60,8 @@ class AssetsController < ApplicationController
     #@assets = Asset.all
     
     pr_category = Category.find_by_name('News Releases')
-    @pr_assets = Asset.find_all_by_category_id(pr_category.id)
+    @assets = Asset.find_all_by_category_id(category_pr.id, order: 'date_published desc')
+    @latest_news = @assets.first
 
     respond_to do |format|
       format.html # show.html.erb
