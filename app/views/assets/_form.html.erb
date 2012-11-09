@@ -25,6 +25,12 @@
     <%= f.text_field :short_title, class: 'span6' %>
   </div>
 
+  <div class="field dateselect">
+    <%= f.label :date_published %><br />
+    <%#= select_date Date.today, :prefix => :date_published %><br />
+    <%= date_select :asset, :date_published %>
+  </div>
+
   <div class="field">
     <label>Image/Asset Type</label>
     <label class="radio">

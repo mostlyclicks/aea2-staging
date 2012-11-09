@@ -1,6 +1,6 @@
 class AssetsController < ApplicationController
 
-  http_basic_authenticate_with :name => ENV['HTTP_NAME'], :password => ENV['HTTP_PASS'], :only => [:new, :edit, :index]
+  #http_basic_authenticate_with :name => ENV['HTTP_NAME'], :password => ENV['HTTP_PASS'], :only => [:new, :edit, :index]
   # GET /assets
   # GET /assets.json
   def index
@@ -16,9 +16,9 @@ class AssetsController < ApplicationController
 
   def latest_news_release
     category_pr = Category.find_by_slug("news-releases")
-    @assets = Asset.find_all_by_category_id(category_pr.id, order: 'created_at desc')
+    @assets = Asset.find_all_by_category_id(category_pr.id, order: 'date_published desc')
     @latest_news = @assets.first
-    @categories = Category.all(order: 'created_at desc')
+    @categories = Category.all(order: 'date_published desc')
   end
 
   def show_images

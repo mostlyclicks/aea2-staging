@@ -1,6 +1,6 @@
 class Asset < ActiveRecord::Base
   attr_accessible :category_id, :description, :name, :aea_file, :excerpt, 
-                  :link_display_text, :link_url, :faq_question, :faq_answer, :asset_type, :short_title
+                  :link_display_text, :link_url, :faq_question, :faq_answer, :asset_type, :short_title, :date_published
   attr_writer :current_step
 
   belongs_to :category

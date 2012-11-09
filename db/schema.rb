@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121106214914) do
+ActiveRecord::Schema.define(:version => 20121109161642) do
 
   create_table "assets", :force => true do |t|
     t.string   "name"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(:version => 20121106214914) do
     t.text     "faq_answer"
     t.string   "asset_type"
     t.string   "short_title"
+    t.date     "date_published"
   end
 
   add_index "assets", ["slug"], :name => "index_assets_on_slug"

@@ -65,3 +65,5 @@ li a:visited {color:#f15c22;}
 
 ul#assets li a.sb-release-link {color:#ffffff !IMPORTANT;}
 ul#assets li a.sb-release-link:visited {color:#ffffff !IMPORTANT;}
+
+.dateselect select {width:120px;}
