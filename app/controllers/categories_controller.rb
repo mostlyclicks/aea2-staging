@@ -4,8 +4,13 @@ class CategoriesController < ApplicationController
   # GET /categories.json
   def index
     @categories = Category.all(order: 'created_at')
-    @category_pr = Category.find_by_id("news-releases")
-    
+    @category_pr = Category.find_by_slug("news-releases")
+    @assets = Asset.find_all_by_category_id(@category_pr.id, order: 'date_published desc')
+    @latest_news = @assets.first
+    #category_pr = Category.find_by_id("news-releases")
+    #assets = Asset.find_all_by_category_id(@category_pr.id)
+    #@count = @category.assets.count
+
     
     respond_to do |format|
       format.html # index.html.erb

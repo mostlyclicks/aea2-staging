@@ -23,7 +23,13 @@
 		<%= link_to image_tag('orange-ribbon-3.png', class: 'ribbon' ), action: 'latest_news_release', controller: 'assets' %>
 
 		<div id="sb_box">
-			<%= yield :sb_box %>
+			<%#= yield :sb_box %>
+			<h5><%= @latest_news.name %></h5>
+			<%= @latest_news.excerpt %><br /><br />
+			<ul id=\"assets\" style=\"margin-left:15px;\">
+			<li style=\"width:100%;margin-left:0px;\"><%= link_to 'News release archive', '/assets/latest_news_release', class: 'sb-release-link' %></li>
+			</ul>
+				<br />
 		</div>
 	</div>
 	<div class="span7">
