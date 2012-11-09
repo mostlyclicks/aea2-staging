@@ -87,6 +87,9 @@ class AssetsController < ApplicationController
   # GET /assets/1/edit
   def edit
     @asset = Asset.find(params[:id])
+    category_pr = Category.find_by_name('News Releases')
+    @ln_assets = Asset.find_all_by_category_id(category_pr.id, order: 'date_published desc')
+    @latest_news = @ln_assets.first
   end
 
   # POST /assets
