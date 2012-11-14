@@ -1,35 +1,24 @@
 class CategoriesController < ApplicationController
-  http_basic_authenticate_with :name => ENV['HTTP_NAME'], :password => ENV['HTTP_PASS'], :only => [:new, :edit]
+  #http_basic_authenticate_with :name => ENV['HTTP_NAME'], :password => ENV['HTTP_PASS'], :only => [:new, :edit]
+
+  before_filter :load_latest_news
+
   # GET /categories
   # GET /categories.json
   def index
     @categories = Category.all(order: 'created_at')
-    @category_pr = Category.find_by_slug("news-releases")
-    @assets = Asset.find_all_by_category_id(@category_pr.id, order: 'date_published desc')
-    @latest_news = @assets.first
-    #category_pr = Category.find_by_id("news-releases")
-    #assets = Asset.find_all_by_category_id(@category_pr.id)
-    #@count = @category.assets.count
-
     
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @categories }
     end
   end
-  
 
   # GET /categories/1
   # GET /categories/1.json
   def show
     @category = Category.find(params[:id])
-    @assets = Asset.all
     @categories = Category.all(order: 'created_at')
-    @category_pr = Category.find_by_slug("news-releases")
-
-    category_pr = Category.find_by_name('News Releases')
-    @ln_assets = Asset.find_all_by_category_id(category_pr.id, order: 'date_published desc')
-    @latest_news = @ln_assets.first
 
     respond_to do |format|
       format.html # show.html.erb
@@ -42,10 +31,6 @@ class CategoriesController < ApplicationController
   def new
     @category = Category.new
 
-    category_pr = Category.find_by_name('News Releases')
-    @ln_assets = Asset.find_all_by_category_id(category_pr.id, order: 'date_published desc')
-    @latest_news = @ln_assets.first
-
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @category }
@@ -55,10 +40,6 @@ class CategoriesController < ApplicationController
   # GET /categories/1/edit
   def edit
     @category = Category.find(params[:id])
-
-    category_pr = Category.find_by_name('News Releases')
-    @ln_assets = Asset.find_all_by_category_id(category_pr.id, order: 'date_published desc')
-    @latest_news = @ln_assets.first
   end
 
   # POST /categories
@@ -104,4 +85,13 @@ class CategoriesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+private
+
+  def load_latest_news
+    category_pr = Category.find_by_slug("news-releases")
+    @ln_assets = Asset.find_all_by_category_id(category_pr.id, order: 'date_published desc')
+    @latest_news = @ln_assets.first
+  end
+
 end

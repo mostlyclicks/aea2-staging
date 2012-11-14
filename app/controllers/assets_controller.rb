@@ -4,7 +4,6 @@ class AssetsController < ApplicationController
 
   before_filter :load_latest_news, :except => :latest_news_release
 
-
   # GET /assets
   # GET /assets.json
   def index
