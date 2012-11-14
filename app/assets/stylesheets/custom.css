@@ -4,9 +4,15 @@ body {background: url('/assets/background2.gif') no-repeat center center fixed;
       	-moz-background-size: cover;
       	-o-background-size: cover;
       	background-size: cover;
-      	height:100%;} 
+      	height:100%;}
 
-.container {width:980px;margin-top:0;padding-bottom:20px;}
+
+
+
+
+
+
+/*.container {width:980px;margin-top:0;padding-bottom:20px;}*/
 #content {background:url(/assets/main-bg.gif) 0 0 repeat-y #fff;color:#6d6e71;}
 #header {display:block;background:url(/assets/top-bg.jpg) 0 0 #fff;}
 #main {background:url(/assets/blue-gradient.png) 330px 0 no-repeat;}
@@ -32,7 +38,7 @@ ul#assets li.question-links a:visited {color:#f15c22;}
 /*li {}*/
 .rightBorder {border-right:1px solid #cdcdcd;}
 #sidebar a:hover {background-color:transparent;}
-.ribbon {min-width:329px;min-height:66px;}
+
 /*.faq {display:block;padding-bottom:3em;float:left;}*/
 
 #sb_box {width:220px;padding:15px;margin:15px 0 0 30px;color:#fff;
@@ -67,3 +73,101 @@ ul#assets li a.sb-release-link {color:#ffffff !IMPORTANT;}
 ul#assets li a.sb-release-link:visited {color:#ffffff !IMPORTANT;}
 
 .dateselect select {width:120px;}
+
+@media (min-width: 1200px) { 
+	.container {width:980px;margin-top:0;padding-bottom:20px;}
+	.span7 .row {width:98%;margin-left:-30px;}
+	.span7 .row .span7 {margin-left:0px;padding-bottom:20px;float:left;margin-left:30px;width:99%;}
+	.tagline {min-width:276px;min-height:230px;}
+	.ribbon {min-width:329px;min-height:66px;}
+	.media-room {margin-left:50px;}
+	/*.span7 {margin-left:0px;padding-bottom:20px;float:left;margin-left:30px;width:600px;}
+	#main {background:url(/assets/blue-gradient.png) 330px 0 no-repeat;}
+	/*#footer {display:none;}
+	#header {display:none;}*/
+
+ }
+
+ @media (min-width: 980px) and (max-width: 1199px){ 
+	.container {width:980px;margin-top:0;padding-bottom:20px;}
+	.span7 .row {width:98%;margin-left:30px;}
+	.span7 .row .span7 {margin-left:0px;padding-bottom:20px;float:left;margin-left:30px;width:120%;}
+
+	.tagline {min-width:276px;min-height:230px;}
+	.ribbon {min-width:329px;min-height:66px;}
+	.media-room {margin-left:50px;}
+	#main {background:url(/assets/blue-gradient.png) 320px 0 no-repeat;}
+	/*#footer {display:none;}
+	#header {display:none;}*/
+ }
+
+@media (min-width:768px) and (max-width:979px) {
+	.ribbon, .tagline {display:none;}
+	#sidebar {display:none;}
+	#main {background:none;}
+	#content {background:url(/assets/main-bg.gif) -300px 0 repeat-y #fff;color:#6d6e71;}
+	.media-room {float:left;margin-left:20px;float:right;max-width:50%;}
+
+	.span7 .row {width:100%;margin-left:0px;}
+	.span7 .row .span7 {margin-left:0px;padding-bottom:20px;float:left;margin-left:0px;width:700px;}
+}
+
+/* Large desktop */ /*
+@media (min-width: 979px) { 
+	
+	.container {width:978px;margin-top:0;padding-bottom:20px;}
+	.span7 {padding-bottom:20px;}
+	
+	.span7 {margin-left:0px;padding-bottom:20px;float:left;margin-left:30px;width:640px;}
+	/*.span7 .row {width:96%;margin-left:-0px;}
+
+	.ribbon {min-width:329px;min-height:66px;}
+
+	.media-room {margin-left:50px;}
+	#main {background:url(/assets/blue-gradient.png) 330px 0 no-repeat;}
+	/*#footer {display:none;}
+	#header {display:none;}
+
+ }*/
+ 
+/* Portrait tablet to landscape and desktop (min-width: 768px) and 
+@media (max-width: 979px) { 
+	#content {border:1px solid green;width:768px;}
+	.container {width:768px;margin-top:0;padding-bottom:20px;border:1px solid green;}
+	.span7 {margin-left:0px;padding-bottom:20px;width:450px;float:right;}
+	.span7 .row {width:430px;margin-left:-0px;}
+	.span4 {width:90%;float:left;}
+	
+	.span8 {}
+	#main {background:url(/assets/blue-gradient.png) 300px 0 no-repeat;}
+	.ribbon {min-width:300px;margin-left:6px;}
+	#content {background:url(/assets/main-bg.gif) -20px 0 repeat-y #fff;color:#6d6e71;}
+	.media-room {margin-left:20px;max-width:50%;}
+	/*#footer {display:none;}
+	#header {display:none;}
+
+ }
+ */
+/* Landscape phone to portrait tablet 
+@media (max-width: 767px) { 
+	
+	.span7 {margin-left:0px;width:97%;border:1px solid red;}
+	.span7 .row {width:95%;margin-left:-0px;}
+	.span4 {width:90%;}
+	.media-room {float:left;margin-left:20px;float:right;max-width:50%;}
+	#content {background:url(/assets/main-bg.gif) -390px 0 repeat-y #fff;color:#6d6e71;}
+	#main {background:none;}
+	#sidebar {display:none;}
+	ul#assets li.question-links {width:320px;margin-left:-43px;}
+	ul#assets li.float-links {width:169px;margin-left:-13px;}
+	#header {background-color:#efefef;background-image:none;}
+
+
+	
+
+ }
+ */
+/* Landscape phones and down 
+@media (max-width: 480px) { 
+	.span7 {border:1px solid black;}
+ }*/

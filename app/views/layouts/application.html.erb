@@ -13,13 +13,13 @@
 	<%#= image_tag 'blue-gradient.png' %>
 	<div id="header">
 		<%= link_to (image_tag 'top-logo.png', alt: 'AEA Logo'), root_path, class: 'image-link' %>
-		<%= image_tag 'top-title-tagline3.png', alt: 'Media and News, Resources for the media and AEA members.', style: 'margin-left:50px;' %>
+		<%= image_tag 'top-title-tagline3.png', alt: 'Media and News, Resources for the media and AEA members.', class: 'media-room hidden-phone' %>
 	</div>
 
 
 	<div class="row" id="main">
 	<div id="sidebar" class="span3">
-		<%= image_tag 'side-tag.png' %>
+		<%= image_tag 'side-tag.png', class: 'tagline' %>
 		<%= link_to image_tag('orange-ribbon-3.png', class: 'ribbon' ), action: 'latest_news_release', controller: 'assets' %>
 
 		<div id="sb_box">
