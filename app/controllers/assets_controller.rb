@@ -1,16 +1,16 @@
 class AssetsController < ApplicationController
 
   #http_basic_authenticate_with :name => ENV['HTTP_NAME'], :password => ENV['HTTP_PASS'], :only => [:new, :edit, :index]
+
+  before_filter :load_latest_news, :except => :latest_news_release
+
+
   # GET /assets
   # GET /assets.json
   def index
     @assets = Asset.find(:all, :include => :category, order: 'name asc')
     @categories = Category.all(order: 'created_at')
     @category = Category.all
-
-    category_pr = Category.find_by_name('News Releases')
-    @ln_assets = Asset.find_all_by_category_id(category_pr.id, order: 'date_published desc')
-    @latest_news = @ln_assets.first
 
     respond_to do |format|
       format.html # index.html.erb
@@ -28,31 +28,20 @@ class AssetsController < ApplicationController
   def show_images
     @assets_images = Asset.find_all_by_asset_type('images')
     @categories = Category.all
-    category_pr = Category.find_by_slug("news-releases")
-    #@category_pr = Category.find_by_slug("news-releases")
-    @assets = Asset.find_all_by_category_id(category_pr.id, order: 'date_published desc')
-    @latest_news = @assets.first
   end
 
   def show_news_release_images
     @assets_news = Asset.find_all_by_asset_type('img-for-news-release')
-     category_pr = Category.find_by_slug("news-releases")
-     @assets = Asset.find_all_by_category_id(category_pr.id, order: 'date_published desc')
-    @latest_news = @assets.first
   end
 
   def show_logos
     @assets_logos = Asset.find_all_by_asset_type('logos')
-    @categories = Category.all
-     category_pr = Category.find_by_slug("news-releases")
-     @assets = Asset.find_all_by_category_id(category_pr.id, order: 'date_published desc')
-    @latest_news = @assets.first
+    @categories = Category.all 
   end
 
   def show_news_archives
-    category_pr = Category.find_by_slug("news-releases")
     @categories = Category.all
-
+    category_pr = Category.find_by_slug("news-releases")
     @assets = Asset.find_all_by_category_id(category_pr.id)
   end
 
@@ -62,10 +51,6 @@ class AssetsController < ApplicationController
     @asset = Asset.find(params[:id])
     @categories = Category.all(order: 'created_at')
     @assets = Asset.all
-    
-    category_pr = Category.find_by_name('News Releases')
-    @ln_assets = Asset.find_all_by_category_id(category_pr.id, order: 'date_published desc')
-    @latest_news = @ln_assets.first
 
     respond_to do |format|
       format.html # show.html.erb
@@ -78,10 +63,6 @@ class AssetsController < ApplicationController
   def new
     @asset = Asset.new
 
-    category_pr = Category.find_by_name('News Releases')
-    @ln_assets = Asset.find_all_by_category_id(category_pr.id, order: 'date_published desc')
-    @latest_news = @ln_assets.first
-
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @asset }
@@ -91,9 +72,6 @@ class AssetsController < ApplicationController
   # GET /assets/1/edit
   def edit
     @asset = Asset.find(params[:id])
-    category_pr = Category.find_by_name('News Releases')
-    @ln_assets = Asset.find_all_by_category_id(category_pr.id, order: 'date_published desc')
-    @latest_news = @ln_assets.first
   end
 
   # POST /assets
@@ -139,4 +117,13 @@ class AssetsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+private
+
+  def load_latest_news
+    category_pr = Category.find_by_slug("news-releases")
+    @ln_assets = Asset.find_all_by_category_id(category_pr.id, order: 'date_published desc')
+    @latest_news = @ln_assets.first
+  end
+
 end
