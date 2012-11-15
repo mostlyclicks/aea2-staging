@@ -97,20 +97,65 @@ ul#assets li a.sb-release-link:visited {color:#ffffff !IMPORTANT;}
 	.ribbon {min-width:329px;min-height:66px;}
 	.media-room {margin-left:50px;}
 	#main {background:url(/assets/blue-gradient.png) 320px 0 no-repeat;}
+	#footer .row .span7 {margin:0px 0 0 40px;}
+	#footer .row .copyright {text-align:left;}
 	/*#footer {display:none;}
 	#header {display:none;}*/
  }
 
 @media (min-width:768px) and (max-width:979px) {
 	.ribbon, .tagline {display:none;}
-	#sidebar {display:none;}
+	#sidebar {background-color:#0491c6;width:724px;}
+	#sidebar h5 {display:none;}
+	#sb_box {padding-top:0px;margin-top:-4px;}
+	#sb_box br {display:none;}
+	#sb_box ul#asset {margin-top:-40px;border:1px solid red;}
+	#sb_box ul#asset li {display:inline-block;}
 	#main {background:none;}
 	#content {background:url(/assets/main-bg.gif) -300px 0 repeat-y #fff;color:#6d6e71;}
-	.media-room {float:left;margin-left:20px;float:right;max-width:50%;}
+	.media-room {float:left;margin-left:20px;float:right;max-width:50%;margin-top:22px;}
 
 	.span7 .row {width:100%;margin-left:0px;}
 	.span7 .row .span7 {margin-left:0px;padding-bottom:20px;float:left;margin-left:0px;width:700px;}
+	#header {background-color:#efefef;background-image:none;}
+	#footer .row .span7 {width:90%;margin:10px 0 0 50px;}
+	#footer .row .copyright {text-align:left;}
 }
+
+@media (max-width:767px) {
+	.ribbon, .tagline {display:none;}
+	#sidebar {background-color:#0491c6;width:100%;float:left;}
+	#sidebar h5 {display:none;}
+	#sb_box {padding-top:0px;margin-top:-4px;}
+	#sb_box br {display:none;}
+	#sb_box ul#asset {margin-top:-40px;}
+	#sb_box ul#asset li {display:inline-block;}
+	#main {background:none;}
+	#content {background:url(/assets/main-bg.gif) -300px 0 repeat-y #fff;color:#6d6e71;}
+
+	.media-room {display:none;}
+	#header {background-color:#efefef;background-image:none;}
+
+	.span7 .row {width:100%;margin-left:0px;}
+	.span7 .row .span7 {margin-left:0px;padding-bottom:20px;float:left;margin-left:0px;width:700px;}
+	#footer .row .span7 {width:90%;margin:10px 0 0 32px;}
+
+}
+
+
+@media (max-width: 480px) {
+	#sidebar {background-color:#0491c6;width:352px;float:left;}
+	#sidebar h5 {display:none;}
+
+	#sb_box {padding-top:0px;margin-top:-4px;}
+	#sb_box br {display:none;}
+	#sb_box ul#asset {margin-top:-40px;}
+	#sb_box ul#asset li {display:block;}
+	.span7 .row {width:100%;margin-left:0px;}
+	.span7 .row .span7 {margin-left:0px;padding-bottom:20px;float:left;margin-left:0px;width:320px;}
+	ul#assets {margin-left:0px;}
+	.span4 ul#assets {margin-left:18px;}
+ }
 
 /* Large desktop */ /*
 @media (min-width: 979px) { 
