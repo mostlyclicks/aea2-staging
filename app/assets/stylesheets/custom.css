@@ -154,7 +154,7 @@ ul#assets li a.sb-release-link:visited {color:#ffffff !IMPORTANT;}
 	#sb_box ul#asset {margin-top:-40px;}
 	#sb_box ul#asset li {display:block;}
 	.span7 .row {width:100%;margin-left:0px;}
-	.span7 .row .span7 {margin-left:0px;padding-bottom:20px;float:left;margin-left:0px;width:320px;}
+	.span7 .row .span7 {margin-left:0px;padding-bottom:20px;float:left;margin-left:0px;width:100%;}
 	ul#assets {margin-left:0px;}
 	.span4 ul#assets {margin-left:18px;}
  }
