@@ -1,62 +1,30 @@
 
 <div class="row-fluid span6 show_content" style="">
-  <h1>Assets</h1>
-<table width="500">
+  <h1 class="pull-left">Assets</h1>
+  <%= button_to  'Add new asset', new_asset_path, class: 'pull-right btn btn-primary', method: 'get' %>
+<table width="575" class="table table-striped">
   <tr>
     <th>Asset</th>
     <th>Category</th>
+    <th>&nbsp;</th>
 
   </tr>
 <% @assets.each do |asset| %>
   <tr>
-    <td><%= link_to asset.name, asset.aea_file_url, target: '_blank' %> <%= link_to 'S', asset %> | 
-    <%= link_to 'E', edit_asset_path(asset) %> | 
-    <%= link_to 'D', asset, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    <td><% @category.each do |cat| %>
+    <td width="300"><%= link_to asset.name, asset.aea_file_url, target: '_blank' %> </td>
+    <td width="130" valign="top"><% @category.each do |cat| %>
         <% if cat.id == asset.category_id %>
           <%= link_to cat.name, cat %>
           
         <% end %>
       <% end %> </td>
+      <td width="60">
+        <%= link_to '<i class="icon-eye-open"></i>'.html_safe, asset %> | 
+        <%= link_to '<i class="icon-edit"></i>'.html_safe, edit_asset_path(asset) %> | 
+    <%= link_to '<i class="icon-trash"></i>'.html_safe, asset, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
 </div>
-<!--
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Category</th>
-    <th></th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @assets.each do |asset| %>
-  <tr>
-    <td><%= asset.name %></td>å
-    <td><%= asset.description %></td>
-    <td><%= asset.category_id %></td>
-    <td>
-      <% @category.each do |cat| %>
-        <% if cat.id == asset.category_id %>
-          <%= cat.name %>
-        <% end %>
-      <% end %>  
-      
-    </td>
-    <td><%= link_to 'Show', asset %></td>
-    <td><%= link_to 'Edit', edit_asset_path(asset) %></td>
-    <td><%= link_to 'Destroy', asset, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Asset', new_asset_path %>
--->
 

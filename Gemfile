@@ -9,6 +9,7 @@ gem 'pg'
 gem 'heroku'
 gem 'thin'
 gem 'fog'
+gem 'tinymce-rails'
 #gem 'taps'
 
 group :development do

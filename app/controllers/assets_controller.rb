@@ -7,8 +7,8 @@ class AssetsController < ApplicationController
   # GET /assets
   # GET /assets.json
   def index
-    @assets = Asset.find(:all, :include => :category, order: 'name asc')
-    @categories = Category.all(order: 'created_at')
+    @assets = Asset.find(:all, :include => :category, order: 'category_id asc')
+    @categories = Category.all(order: 'name asc')
     @category = Category.all
 
     respond_to do |format|

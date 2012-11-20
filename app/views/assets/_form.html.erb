@@ -1,4 +1,5 @@
 <div class="show_content">
+<%= tinymce %>
 <h1>Add an Asset</h1>
 <%= form_for(@asset, :html => {:multipart => true}) do |f| %>
   <% if @asset.errors.any? %>
@@ -32,22 +33,22 @@
   </div>
 
   <div class="field">
-    <label>Image/Asset Type</label>
+    <label>Asset Type</label>
     <label class="radio">
       <%= f.radio_button(:asset_type, "links") %>
-      Links
+      Link
     </label>
     <label class="radio">
       <%= f.radio_button(:asset_type, "img-for-news-release") %>
-      Images for News Releases
+      Image for Press Releases
     </label>
     <label class="radio">
       <%= f.radio_button(:asset_type, "images") %>
-      Images
+      Image
     </label>
     <label class="radio">
       <%= f.radio_button(:asset_type, "logos") %>
-      Logos
+      Logo
     </label>
     <label class="radio">
       <%= f.radio_button(:asset_type, "faq-question") %>
@@ -67,30 +68,37 @@
     <%= f.label 'Upload' %><br /><%= f.file_field :aea_file %>
   </div>
 
+<a href="#press-release-section" data-toggle="collapse" data-target="#press-release-section" class="btn" style="margin-bottom:1em;">Show Press Release Fields</a>
+<div id="press-release-section" class="collapse">
   <div class="field">
     <%= f.label :excerpt %><br />
-    <%= f.text_area :excerpt, class: 'span6', rows: '10' %>
+    <%= f.text_area :excerpt, class: 'span6 tinymce', rows: '10' %>
   </div>
 
 
   <div class="field">
     <%= f.label :description %><br />
-    <%= f.text_area :description, class: 'span6', rows: '15' %>
+    <%= f.text_area :description, class: 'span6 tinymce', rows: '15' %>
   </div>
-
+</div>
 
   <!-- FAQs -->
+<a href="#faq-section" data-toggle="collapse" data-target="#faq-section" class="btn" style="margin-bottom:1em;">Show FAQ section</a>
+<div id="faq-section" class="collapse">
   <div class="field">
     <%= f.label :faq_question %><br />
-    <%= f.text_area :faq_question, rows: '2', class: 'span6' %>
+    <%= f.text_area :faq_question, rows: '2', class: 'span6 tinymce' %>
   </div>
   <div class="field">
     <%= f.label :faq_answer %><br />
-    <%= f.text_area :faq_answer, rows: '3', class: 'span6' %>
+    <%= f.text_area :faq_answer, rows: '3', class: 'span6 tinymce' %>
   </div>
+</div>
 <!-- END FAQS -->
 
 <!-- URLs -->
+<a href="#url-section" data-toggle="collapse" data-target="#url-section" class="btn" style="margin-bottom:1em;">Show Link Section</a>
+<div id="url-section" class="collapse">
   <div class="field">
     <%= f.label :link_display_text %><br />
     <%= f.text_field :link_display_text, class: 'span6' %>
@@ -99,6 +107,7 @@
     <%= f.label :link_url %><br />
     <%= f.text_field :link_url, class: 'span6' %>
   </div>
+</div>
 <!-- END URLs -->
 
 
