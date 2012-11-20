@@ -1,6 +1,8 @@
 <div class="show_content">
 <%= tinymce %>
-<h1>Add an Asset</h1>
+<h1>Assets<%= ': ' + action_name.capitalize %></h1>
+<%= toggle_new_edit_links %>
+
 <%= form_for(@asset, :html => {:multipart => true}) do |f| %>
   <% if @asset.errors.any? %>
     <div id="error_explanation">
@@ -68,7 +70,7 @@
     <%= f.label 'Upload' %><br /><%= f.file_field :aea_file %>
   </div>
 
-<a href="#press-release-section" data-toggle="collapse" data-target="#press-release-section" class="btn" style="margin-bottom:1em;">Show Press Release Fields</a>
+<a href="#press-release-section" data-toggle="collapse" data-target="#press-release-section" class="btn btn-block" style="margin-bottom:1em;">Show Press Release Fields</a>
 <div id="press-release-section" class="collapse">
   <div class="field">
     <%= f.label :excerpt %><br />
@@ -83,7 +85,7 @@
 </div>
 
   <!-- FAQs -->
-<a href="#faq-section" data-toggle="collapse" data-target="#faq-section" class="btn" style="margin-bottom:1em;">Show FAQ section</a>
+<a href="#faq-section" data-toggle="collapse" data-target="#faq-section" class="btn btn-block" style="margin-bottom:1em;">Show FAQ section</a>
 <div id="faq-section" class="collapse">
   <div class="field">
     <%= f.label :faq_question %><br />
@@ -97,7 +99,7 @@
 <!-- END FAQS -->
 
 <!-- URLs -->
-<a href="#url-section" data-toggle="collapse" data-target="#url-section" class="btn" style="margin-bottom:1em;">Show Link Section</a>
+<a href="#url-section" data-toggle="collapse" data-target="#url-section" class="btn btn-block" style="margin-bottom:1em;">Show Link Section</a>
 <div id="url-section" class="collapse">
   <div class="field">
     <%= f.label :link_display_text %><br />

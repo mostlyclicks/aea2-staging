@@ -13,4 +13,13 @@ module AssetsHelper
 
 		end
 	end
+
+	def toggle_new_edit_links
+		if action_name == 'new'
+  		  "<p>#{link_to 'Back', assets_path}</p>".html_safe
+		elsif action_name == 'edit'
+		  "<p>#{link_to 'Show', @asset} |
+		  		   #{link_to 'Back', assets_path}</p>".html_safe
+		end
+	end
 end

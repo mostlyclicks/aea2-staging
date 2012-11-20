@@ -7,7 +7,6 @@ module CategoriesHelper
         end
 	end
 
-
 	def category_type(category)
 		if category.layout == "2col-1col" #about elec/aea - links to files
 			html = ""
