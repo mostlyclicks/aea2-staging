@@ -11,6 +11,7 @@ gem 'heroku'
 gem 'fog'
 gem 'tinymce-rails'
 gem 'unicorn'
+gem 'newrelic_rpm'
 #gem 'taps'
 
 group :development do
