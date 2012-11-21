@@ -1,6 +1,6 @@
 class AssetsController < ApplicationController
 
-  #http_basic_authenticate_with :name => ENV['HTTP_NAME'], :password => ENV['HTTP_PASS'], :only => [:new, :edit, :index]
+  http_basic_authenticate_with :name => ENV['HTTP_NAME'], :password => ENV['HTTP_PASS'], :only => [:new, :edit, :index]
 
   before_filter :load_latest_news, :except => :latest_news_release
 
