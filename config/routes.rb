@@ -6,6 +6,7 @@ Aea2::Application.routes.draw do
   match 'assets/select_category'
   match 'assets/show_images'
   match 'assets/show_logos'
+  match 'images' => 'assets#show_news_release_images'
   match 'story_images' => 'assets#show_news_release_images'
   match 'assets/show_news_release_images'
   match 'assets/show_news_archives'
