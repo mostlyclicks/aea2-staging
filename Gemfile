@@ -7,9 +7,10 @@ gem 'rails', '3.2.8'
 
 gem 'pg'
 gem 'heroku'
-gem 'thin'
+#gem 'thin'
 gem 'fog'
 gem 'tinymce-rails'
+gem 'unicorn'
 #gem 'taps'
 
 group :development do
