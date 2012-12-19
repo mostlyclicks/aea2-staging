@@ -1,39 +1,135 @@
 <p id="notice"><%= notice %></p>
 
 <div class="row">
-<div class="span7">
+	<div class="span7">
+			<div class="row-fluid">
+				<div class="span11 offset1">
+					<div class="span8">
+						<h1>Logos</h1>
+						<p>These logos are provided for use by members of the American Electrology Association and the media. Please read <a href="https://aea2-assets.s3.amazonaws.com/uploads/AEA-BrandStandards-summer2012-v2.pdf" target="_blank">AEA Logo Usage Guidelines (pdf)</a> for acceptable logo standards and practices.</p>
 
-	<div class="row-fluid">
+						<%= image_tag 'logo-wo-tagline.gif', class: 'logo-image' %>
+						<h3>LOGO – without tagline</h3>
+							<p>The logo shown above is the 2-color version, without tagline. Click on the links below to download individual logo files. An “AEA Logo Pack” is available by clicking on the link at right. The pack contains all the logo file formats in one zipped folder.</p>
 
-		<div class="span11 offset1">
-			<div class="span8">
-				<h1>Logos</h1>
-				<p>These logos are provided for use by members of the American Electrology Association and the media. Please read <a href="https://aea2-assets.s3.amazonaws.com/uploads/AEA-BrandStandards-summer2012-v2.pdf" target="_blank">AEA Logo Usage Guidelines (pdf)</a> for acceptable logo standards and practices.</p>
-<% unless @assets_logos.nil? %>
-	<% @assets_logos.each do |a| %>
-		<div class="span5" style="display:block;text-align:center;border:1px solid #e2e2e2;margin:0 10px 10px 0;height:225px;float:left;">
-			<% if a.aea_file_url(:logo).present? %>
-				<%= image_tag a.aea_file_url(:logo) %><br />
-			<% else %>
-				<%= image_tag a.aea_file_url(:medium) %><br />
-			<% end %>
-			<%= link_to a.name, a.aea_file_url %> </div>
-	<% end %>
-<% end %>
-</div>
+							<h5>EPS</h5>
+							<ul class="logo-list">
+								<li><a href="https://s3.amazonaws.com/aea2-assets/logos/AEA-logo-color-2color.eps" />AEA-logo-color-2color.eps</a></li>
+								<li><a href="https://s3.amazonaws.com/aea2-assets/logos/AEA-logo-black.eps" />AEA-logo-black.eps</a></li>
+								<li><a href="https://s3.amazonaws.com/aea2-assets/logos/AEA-logo-white.eps" />AEA-logo-white.eps</a></li>
+							</ul>
 
-	<div class="span4">
-	<ul id="assets" class="topMargin" style="float:left;margin-left:12px;margin-top:-10px;" >
-		<li style="width:100%;"><a href="https://aea2-assets.s3.amazonaws.com/uploads/AEA-BrandStandards-summer2012-v2.pdf" target="_blank">AEA Logo Usage Guidelines (pdf)</a></li>
-		<li style="width:100%;"><a href="https://s3.amazonaws.com/aea2-assets/uploads/AEA_logo_pack.zip" target="_blank">AEA Logo Pack (zip)</a></li>
-		<li style="width:100%;"><a href="https://s3.amazonaws.com/aea2-assets/uploads/AEA_member_seal_pack.zip" target="_blank">AEA Member Seal (zip)</a></li>
-		<li style="width:100%;"><a href="https://s3.amazonaws.com/aea2-assets/uploads/AEA_tagline_pack.zip" target="_blank">AEA Tagline Pack (zip)</a></li>
-	</ul>
+							<h5>JPG</h5>
+							<ul class="logo-list">
+								<li><a href="https://s3.amazonaws.com/aea2-assets/logos/AEA-logo-color-2color.jpg" />AEA-logo-color-2color.jpg</a></li>
+								<li><a href="https://s3.amazonaws.com/aea2-assets/logos/AEA-logo-black.jpg" />AEA-logo-black.jpg</a></li>
+							</ul>
+
+							<h5>PNG</h5>
+							<ul class="logo-list">
+								<li><a href="https://s3.amazonaws.com/aea2-assets/logos/AEA-logo-color-2color.png" />AEA-logo-color-2color.png</a></li> 
+								<li><a href="https://s3.amazonaws.com/aea2-assets/logos/AEA-logo-black.png" />AEA-logo-black.png</a></li>
+								<li><a href="https://s3.amazonaws.com/aea2-assets/logos/AEA-logo-white.png" />AEA-logo-white.png</a></li>
+							</ul>
+
+
+
+						<%= image_tag 'logo-w-tagline.gif', class: 'logo-image' %>
+						<h3>LOGO – with tagline</h3>
+						<p>The logo shown above is the black version, with tagline. Click on the links below to download individual logo files. L An “AEA Logo Pack” is available by clicking on the link at right. The pack contains all the logo file formats in one zipped folder.</p>
+
+						<h5>EPS</h5>
+						<ul class="logo-list">
+							<li><a href="https://s3.amazonaws.com/aea2-assets/logos/AEA-logo-color-2color-tagline.eps" />AEA-logo-color-2color-tagline.eps</a></li>
+							<li><a href="https://s3.amazonaws.com/aea2-assets/logos/AEA-logo-black-tagline.eps" />AEA-logo-black-tagline.eps</a></li>
+							<li><a href="https://s3.amazonaws.com/aea2-assets/logos/AEA-logo-white-tagline.eps" />AEA-logo-white-tagline.eps</a></li>
+						</ul>
+
+						<h5>JPG</h5>
+						<ul class="logo-list">
+							<li><a href="https://s3.amazonaws.com/aea2-assets/logos/AEA-logo-color-2color-tagline.jpg" />AEA-logo-color-2color-tagline.jpg</a></li>
+							<li><a href="https://s3.amazonaws.com/aea2-assets/logos/AEA-logo-black-tagline.jpg" />AEA-logo-black-tagline.jpg</a></li>
+						</ul>
+
+						<h5>PNG</h5>
+						<ul class="logo-list">
+							<li><a href="https://s3.amazonaws.com/aea2-assets/logos/AEA-logo-color-2color-tagline.png" />AEA-logo-color-2color-tagline.png</a></li>
+							<li><a href="https://s3.amazonaws.com/aea2-assets/logos/AEA-logo-black-tagline.png" />AEA-logo-black-tagline.png</a></li>
+							<li><a href="https://s3.amazonaws.com/aea2-assets/logos/AEA-logo-white-tagline.png" />AEA-logo-white-tagline.png</a></li>
+						</ul>
+
+						<%= image_tag 'logo-tagline-only.gif', class: 'logo-image' %>
+						<h3>TAGLINE only</h3>
+						<p>The tagline shown above is the 70gray version. Click on the links below to download individual tagline files. An “AEA Tagline Pack” is available by clicking on the link at right. The “pack” contains all the tagline file formats in one zipped folder.</p>
+
+						<h5>EPS</h5>
+						<ul class="logo-list">
+							<li><a href="https://s3.amazonaws.com/aea2-assets/logos/AEA-Tagline-70gray.eps" />AEA-Tagline-70gray.eps</a></li>
+							<li><a href="https://s3.amazonaws.com/aea2-assets/logos/AEA-Tagline-black.eps" />AEA-Tagline-black.eps</a></li>
+							<li><a href="https://s3.amazonaws.com/aea2-assets/logos/AEA-Tagline-white.eps" />AEA-Tagline-white.eps</a></li>
+						</ul>
+
+						<h5>JPG</h5>
+						<ul class="logo-list">
+							<li><a href="https://s3.amazonaws.com/aea2-assets/logos/AEA-Tagline-70gray.jpg" />AEA-Tagline-70gray.jpg</a></li>
+							<li><a href="https://s3.amazonaws.com/aea2-assets/logos/AEA-Tagline-black.jpg" />AEA-Tagline-black.jpg</a></li>
+						</ul>
+
+						<h5>PNG</h5>
+						<ul class="logo-list">
+							<li><a href="https://s3.amazonaws.com/aea2-assets/logos/AEA-Tagline-70gray.png" />AEA-Tagline-70gray.png</a></li>
+							<li><a href="https://s3.amazonaws.com/aea2-assets/logos/AEA-Tagline-black.png" />AEA-Tagline-black.png</a></li>
+							<li><a href="https://s3.amazonaws.com/aea2-assets/logos/AEA-Tagline-white.png" />AEA-Tagline-white.png</a></li>
+						</ul>
+
+
+						<%= image_tag 'logo-member-seal.gif', class: 'logo-image' %>
+						<h3>MEMBER SEAL</h3>
+						<p>The member seal shown above is the 2-color version. Click on the links below to download individual tagline files. An “AEA Member Seal Pack” is available by clicking on the link at right. The “pack” contains all the member seal file formats in one zipped folder.</p>
+
+						<h5>EPS</h5>
+						<ul class="logo-list">
+							<li><a href="https://s3.amazonaws.com/aea2-assets/logos/AEA-memberseal-2color.eps" />AEA-memberseal-2color.eps</a></li>
+							<li><a href="https://s3.amazonaws.com/aea2-assets/logos/AEA-memberseal-black.eps" />AEA-memberseal-black.eps</a></li>
+							<li><a href="https://s3.amazonaws.com/aea2-assets/logos/AEA-memberseal-white.eps" />AEA-memberseal-white.eps</a></li>
+							<li><a href="https://s3.amazonaws.com/aea2-assets/logos/AEA-memberseal-2color-notext.eps" />AEA-memberseal-2color-notext.eps</a></li>
+							<li><a href="https://s3.amazonaws.com/aea2-assets/logos/AEA-memberseal-black-notext.eps" />AEA-memberseal-black-notext.eps</a></li>
+							<li><a href="https://s3.amazonaws.com/aea2-assets/logos/AEA-memberseal-white-notext.eps" />AEA-memberseal-white-notext.eps</a></li>
+						</ul>
+
+						<h5>JPG</h5>
+						<ul class="logo-list">
+							<li><a href="https://s3.amazonaws.com/aea2-assets/logos/AEA-memberseal-2color.jpg" />AEA-memberseal-2color.jpg</a></li>
+							<li><a href="https://s3.amazonaws.com/aea2-assets/logos/AEA-memberseal-black.jpg" />AEA-memberseal-black.jpg</a></li>
+							<li><a href="https://s3.amazonaws.com/aea2-assets/logos/AEA-memberseal-2color-notext.jpg" />AEA-memberseal-2color-notext.jpg</a></li>
+							<li><a href="https://s3.amazonaws.com/aea2-assets/logos/AEA-memberseal-black-notext.jpg" />AEA-memberseal-black-notext.jpg</a></li>
+						</ul>
+
+						<h5>PNG</h5>
+						<ul class="logo-list">
+							<li><a href="https://s3.amazonaws.com/aea2-assets/logos/AEA-memberseal-2color.png" />AEA-memberseal-2color.png</a></li>
+							<li><a href="https://s3.amazonaws.com/aea2-assets/logos/AEA-memberseal-black.png" />AEA-memberseal-black.png</a></li>
+							<li><a href="https://s3.amazonaws.com/aea2-assets/logos/AEA-memberseal-white.png" />AEA-memberseal-white.png</a></li>
+							<li><a href="https://s3.amazonaws.com/aea2-assets/logos/AEA-memberseal-2color-notext.png" />AEA-memberseal-2color-notext.png</a></li>
+							<li><a href="https://s3.amazonaws.com/aea2-assets/logos/AEA-memberseal-black-notext.png" />AEA-memberseal-black-notext.png</a></li>
+							<li><a href="https://s3.amazonaws.com/aea2-assets/logos/AEA-memberseal-white-notext.png" />AEA-memberseal-white-notext.png</a></li>
+						</ul>
+
+
+		</div>
+
+				<div class="span4">
+					<ul id="assets" class="topMargin" style="float:left;margin-left:12px;margin-top:-10px;" >
+						<li style="width:100%;"><a href="https://aea2-assets.s3.amazonaws.com/uploads/AEA-BrandStandards-summer2012-v2.pdf" target="_blank">AEA Logo Usage Guidelines (pdf)</a></li>
+						<li style="width:100%;"><a href="https://s3.amazonaws.com/aea2-assets/uploads/AEA_logo_pack.zip" target="_blank">AEA Logo Pack (zip)</a></li>
+						<li style="width:100%;"><a href="https://s3.amazonaws.com/aea2-assets/uploads/AEA_member_seal_pack.zip" target="_blank">AEA Member Seal Pack (zip)</a></li>
+						<li style="width:100%;"><a href="https://s3.amazonaws.com/aea2-assets/uploads/AEA_tagline_pack.zip" target="_blank">AEA Tagline Pack (zip)</a></li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
 	</div>
-
-</div>
-</div>
-</div>
 </div>
 
 

@@ -22,4 +22,5 @@ module AssetsHelper
 		  		   #{link_to 'Back', assets_path}</p>".html_safe
 		end
 	end
+
 end
