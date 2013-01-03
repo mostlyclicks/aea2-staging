@@ -12,6 +12,8 @@ gem 'fog'
 gem 'tinymce-rails'
 gem 'unicorn'
 gem 'newrelic_rpm'
+gem 'therubyracer'
+gem 'libv8', '~> 3.11.8'
 #gem 'taps'
 
 group :development do
@@ -33,6 +35,8 @@ gem 'twitter-bootstrap-rails'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
+  gem 'less-rails'
+  gem 'therubyracer'
   
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
