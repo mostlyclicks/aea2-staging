@@ -15,6 +15,7 @@ gem 'newrelic_rpm'
 gem 'therubyracer'
 gem 'libv8', '~> 3.11.8'
 gem 'less-rails'
+gem 'webrick', '1.3.1'
 #gem 'taps'
 
 group :development do
