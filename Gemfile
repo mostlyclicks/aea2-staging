@@ -7,7 +7,6 @@ gem 'rails', '3.2.10'
 
 gem 'pg'
 gem 'heroku'
-#gem 'thin'
 gem 'fog'
 gem 'tinymce-rails'
 gem 'unicorn'
@@ -16,7 +15,8 @@ gem 'therubyracer'
 gem 'libv8', '~> 3.11.8'
 gem 'less-rails'
 gem 'webrick', '1.3.1'
-#gem 'taps'
+gem 'twitter-bootstrap-rails'
+
 
 group :development do
   gem 'taps', :require => false # has an sqlite dependency, which heroku hates
@@ -30,7 +30,7 @@ group :test do
   gem 'capybara', '1.1.2'
 end
 
-gem 'twitter-bootstrap-rails'
+
 
 # Gems used only for assets and not required
 # in production environments by default.
