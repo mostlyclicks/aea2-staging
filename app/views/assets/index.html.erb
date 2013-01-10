@@ -19,8 +19,8 @@
         <% end %>
       <% end %> </td>
       <td width="60">
-        <%= link_to '<i class="icon-eye-open"></i>'.html_safe, asset %> &nbsp;
-        <%= link_to '<i class="icon-edit"></i>'.html_safe, edit_asset_path(asset) %> &nbsp;
+        <%= link_to '<i class="icon-eye-open"></i>'.html_safe, asset %>
+        <%= link_to '<i class="icon-edit"></i>'.html_safe, edit_asset_path(asset) %>
     <%= link_to '<i class="icon-trash"></i>'.html_safe, asset, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
