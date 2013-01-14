@@ -1,6 +1,9 @@
 Aea2::Application.routes.draw do
 
 
+  get "pages/livechat"
+  match "livechat" => "pages#livechat" 
+
   resources :categories
   
   match 'assets/select_category'

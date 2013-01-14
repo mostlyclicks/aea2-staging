@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>American Electrology Association</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;" />
+</head>
+<body>
+	
+
+<div class="container" id="content-pages">
+	<%#= image_tag 'blue-gradient.png' %>
+	<div id="header">
+		<%= link_to (image_tag 'top-logo.png', alt: 'AEA Logo'), root_path, class: 'image-link' %>
+		<%= image_tag 'top-title-tagline3.png', alt: 'Media and News, Resources for the media and AEA members.', class: 'media-room hidden-phone' %>
+	</div>
+
+
+	<div class="row-fluid" id="main-pages">
+		<div class="span12">
+			<%= yield %>
+		</div>
+	</div>
+
+</div>
+<div class="container" id="footer" style="">
+	<div class="row">
+		<div class="span1">
+			<%= link_to (image_tag 'footer-fb.png', alt: 'Facebook', id: 'facebook'), 'http://www.facebook.com/AEAPublic?ref=ts&fref=ts' %>
+		</div>
+		<div class="span7">
+			<p>
+			Media Inquiries: <%= mail_to 'kerstin@vendiadvertising.com, justin@vendiadvertising.com', 'mediaaea@electrologymedia.com' %></p>
+
+		</div>
+	</div>
+	<div class="row">
+		<!-- span4 offset6 -->
+		<div class="copyright" style="text-align:right;"><small style="margin-right:25px;">&copy;<%= Time.now.strftime('%Y') %> American Electrology Association</small></div>
+
+	</div>
+</div>
+
+<% if Rails.env == "production" %>
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-7561518-50']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+<% end %>
+
+
+</body>
+</html>
+
