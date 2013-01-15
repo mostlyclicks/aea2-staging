@@ -14,7 +14,7 @@ body {background: url('/assets/background2.gif') no-repeat center center fixed;
 
 /*.container {width:980px;margin-top:0;padding-bottom:20px;}*/
 #content {background:url(/assets/main-bg.gif) 0 0 repeat-y #fff;color:#6d6e71;}
-#content-pages {background-color:#fff;color:#6d6e71;}
+
 #header {display:block;background:url(/assets/top-bg.jpg) 0 0 #fff;}
 #main {background:url(/assets/blue-gradient.png) 330px 0 no-repeat;}
 
