@@ -17,7 +17,7 @@ body {background: url('/assets/background2.gif') no-repeat center center fixed;
 #content-pages {background-color:#fff;color:#6d6e71;}
 #header {display:block;background:url(/assets/top-bg.jpg) 0 0 #fff;}
 #main {background:url(/assets/blue-gradient.png) 330px 0 no-repeat;}
-#main-pages {background:url(/assets/blue-gradient.png) 0 0 repeat-x;min-height:500px;}
+
 
 h3, h1 {color:#0491c6;font-family:Palatino, times, serif;font-size:1.4em;font-weight:100;margin:0;padding-top:15px;}
 h1 {line-height:1.20em;}
@@ -53,12 +53,7 @@ ul#assets li.question-links a:visited {color:#f15c22;}
 #sb_box a:hover {background-color:transparent;}
 .rightNav {float:right;margin-top:0px;padding-left:0px;margin-left:0px;}
 
-.livechat h1 {color:#f15c22;font-family:arial, sans-serif;font-size:60px;font-weight:bold;}
-.livechat .btn-warning {}
-.livechat em {font-family:Palotina, times, serif;font-size:18px;}
-.livechat h3 span {color:#f15c22;margin-top:-1em;}
-.livechat p {font-size:12px;}
-.main-right p {font-size:15px;line-height:1.5em;}
+
 
 #footer {background-color:#6d6e71;padding:20px 0 20px 0;color:#fff;}
 #footer #facebook {margin-left:27px;}
